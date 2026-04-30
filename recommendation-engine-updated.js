@@ -4,7 +4,6 @@
 // update: https://github.com/HPfan26/cozy-gamers-data/blob/main/games.json
 // ============================================================
 
-
 let activeFilters = [];
 let steamPrices = {};
 let playstationPrices = {};
