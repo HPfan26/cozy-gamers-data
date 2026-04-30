@@ -1,0 +1,72 @@
+name: Daily Price Scraper
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Runs every day at 6am UTC
+  workflow_dispatch:       # Allows manual trigger from GitHub Actions tab
+
+jobs:
+  scrape-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run price scraper
+        env:
+          ITAD_API_KEY: ${{ secrets.ITAD_API_KEY }}
+        run: node scraper.mjs
+
+      - name: Upload Steam prices to WordPress
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          server: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          port: ${{ secrets.SFTP_PORT }}
+          local_path: './steamPrices_multi.json'
+          remote_path: '/thecozygamers-www/wp-content/uploads/'
+          sftp_only: true
+          sftpArgs: '-o ConnectTimeout=10'
+
+      - name: Upload PlayStation prices to WordPress
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          server: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          port: ${{ secrets.SFTP_PORT }}
+          local_path: './playstation-prices.json'
+          remote_path: '/thecozygamers-www/wp-content/uploads/'
+          sftp_only: true
+          sftpArgs: '-o ConnectTimeout=10'
+
+      - name: Upload Nintendo prices to WordPress
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          server: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          port: ${{ secrets.SFTP_PORT }}
+          local_path: './dekudeals_prices_all_regions.json'
+          remote_path: '/thecozygamers-www/wp-content/uploads/'
+          sftp_only: true
+          sftpArgs: '-o ConnectTimeout=10'
+
+      - name: Upload Xbox prices to WordPress
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          server: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          port: ${{ secrets.SFTP_PORT }}
+          local_path: './xboxPrices.json'
+          remote_path: '/thecozygamers-www/wp-content/uploads/'
+          sftp_only: true
+          sftpArgs: '-o ConnectTimeout=10'
