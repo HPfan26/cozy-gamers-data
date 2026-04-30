@@ -1,0 +1,970 @@
+{
+  "Stardew Valley": {
+    "steamAppId": 413150,
+    "tags": ["farming", "fishing", "crafting", "cooking", "mining", "building", "decorating", "collecting", "business management", "creature collection", "relationship building", "animal care", "romance", "relaxing", "casual", "wholesome", "cute", "calming", "nature", "village", "multiple endings", "replayable", "dramatic", "funny", "emotional", "lgbtq+", "open world", "magic", "supernatural", "mermaids", "life simulation", "single-player", "co-op"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Stardew-Valley.jpg",
+    "description": "A cozy farming sim where you grow crops, raise animals, befriend villagers, and build the farm of your dreams.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/413150/Stardew_Valley/",
+      "switch": "https://linkly.link/2Es4w",
+      "playstation": "https://linkly.link/2CQWL",
+      "xbox": "https://linkly.link/2EUHL"
+    }
+  },
+  "Palia": {
+    "steamAppId": 2707930,
+    "tags": ["farming", "fishing", "crafting", "cooking", "mining", "building", "decorating", "collecting", "business management", "creature collection", "relationship building", "animal care", "romance", "relaxing", "casual", "post apocalyptic", "nature", "village", "story-rich", "replayable", "mystery", "funny", "lgbtq+", "open world", "fantasy", "magic", "supernatural", "sci-fi", "life simulation", "multiplayer", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Palia-Game.jpg",
+    "description": "A relaxing community sim MMO where you can fish, farm, build, and form relationships in a cozy world.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/2707930/Palia/",
+      "switch": "https://linkly.link/2EtUe"
+    }
+  },
+  "Fae Farm": {
+    "steamAppId": 2230110,
+    "tags": ["farming", "fishing", "crafting", "cooking", "building", "decorating", "collecting", "creature collection", "relationship building", "animal care", "romance", "relaxing", "casual", "wholesome", "cute", "calming", "nature", "village", "story-rich", "heartfelt", "lgbtq+", "open world", "fantasy", "magic", "supernatural", "witches", "mermaids", "life simulation", "sandbox", "rpg", "single-player", "co-op", "multiplayer", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Fae-Farm.jpg",
+    "description": "A magical farming sim where you cultivate crops, brew potions, and explore a whimsical world full of enchantment.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/2230110/Fae_Farm/",
+      "switch": "https://linkly.link/2EtVr",
+      "playstation": "https://linkly.link/2CQcZ",
+      "xbox": "https://linkly.link/2EUHN"
+    }
+  },
+  "Dinkum": {
+    "steamAppId": 1062520,
+    "tags": ["farming", "fishing", "crafting", "building", "decorating", "business management", "relationship building", "animal care", "relaxing", "casual", "wholesome", "cute", "nature", "village", "story-rich", "replayable", "open world", "life simulation", "sandbox", "rpg", "single-player", "co-op", "multiplayer", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Dinkum.jpg",
+    "description": "An Aussie-themed sim where you build a town, farm, mine, and care for animals in the Outback.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1062520/Dinkum/"
+    }
+  },
+  "Trash Goblin": {
+    "steamAppId": 2407830,
+    "tags": ["crafting", "decorating", "collecting", "business management", "cleaning", "relaxing", "casual", "wholesome", "cute", "calming", "village", "story-rich", "funny", "fantasy", "magic", "life simulation", "sandbox", "puzzle", "single-player", "no combat", "point and click"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Trash-Goblin-Cover-Art.jpg",
+    "description": "A charming sim where you sort trash and clean up the environment as a lovable goblin.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/2407830/Trash_Goblin/"
+    }
+  },
+  "Dredge": {
+    "steamAppId": 1562430,
+    "tags": ["fishing", "collecting", "creature collection", "relaxing", "casual", "calming", "spooky", "dark", "nature", "village", "story-rich", "multiple endings", "replayable", "mystery", "dramatic", "emotional", "open world", "magic", "sci-fi", "adventure", "puzzle", "horror", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Dredge-Cover-Art.jpg",
+    "description": "A mysterious fishing adventure set in haunted seas with Lovecraftian horror lurking beneath.",
+    "hub": "https://www.thecozygamers.com/cozy-game-recommendations/dredge/",
+    "review": "https://www.simplegamer.co.uk/dredge-review-secrets-madness-and-lots-of-fish/",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1562430/DREDGE/",
+      "switch": "https://linkly.link/2EtYH",
+      "playstation": "https://linkly.link/2CQci",
+      "xbox": "https://linkly.link/2EUHy"
+    }
+  },
+  "Tiny Glade": {
+    "steamAppId": 2198150,
+    "tags": ["building", "decorating", "relaxing", "casual", "wholesome", "cute", "calming", "nature", "village", "short", "heartfelt", "fantasy", "magic", "mythology", "life simulation", "sandbox", "puzzle", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/TIny-Glade.jpg",
+    "description": "A peaceful castle-building toy with no goals or stress, just creativity and relaxation.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/2198150/Tiny_Glade/"
+    }
+  },
+  "Reka": {
+    "steamAppId": 1737870,
+    "tags": ["crafting", "building", "decorating", "collecting", "creature collection", "cleaning", "relaxing", "wholesome", "cute", "calming", "spooky", "dark", "nature", "village", "story-rich", "branching story", "heartfelt", "mystery", "emotional", "lgbtq+", "open world", "fantasy", "magic", "supernatural", "mythology", "ghosts", "witches", "life simulation", "sandbox", "adventure", "rpg", "puzzle", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Reka.jpg",
+    "description": "A fantasy sim where you play a witch traveling in a walking house through a folkloric world.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1737870/REKA/"
+    }
+  },
+  "Wanderstop": {
+    "steamAppId": 1299460,
+    "tags": ["farming", "cooking", "decorating", "collecting", "business management", "relationship building", "cleaning", "relaxing", "wholesome", "cute", "calming", "nature", "village", "story-rich", "short", "heartfelt", "emotional", "lgbtq+", "fantasy", "magic", "supernatural", "life simulation", "adventure", "puzzle", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Wanderstop.jpg",
+    "description": "Run a cozy tea shop in a surreal, dreamlike forest while exploring themes of rest and transformation.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1299460/Wanderstop/",
+      "playstation": "https://linkly.link/2CQcv",
+      "xbox": "https://linkly.link/2EUI3"
+    }
+  },
+  "A Little to the Left": {
+    "steamAppId": 1629520,
+    "tags": ["collecting", "relaxing", "casual", "wholesome", "cute", "calming", "short", "replayable", "funny", "puzzle", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/A-Little-to-the-Left.jpg",
+    "description": "A cozy puzzle game about tidying up and organizing objects in satisfying ways.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1629520/A_Little_to_the_Left/",
+      "switch": "https://linkly.link/2EtZK",
+      "playstation": "https://linkly.link/2CQdK",
+      "xbox": "https://linkly.link/2EUI8"
+    }
+  },
+  "Spilled!": {
+    "steamAppId": 2240080,
+    "tags": ["business management", "creature collection", "animal care", "cleaning", "relaxing", "casual", "wholesome", "cute", "calming", "nature", "short", "replayable", "heartfelt", "educational", "linear", "life simulation", "adventure", "puzzle", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Spilled-game.jpg",
+    "description": "Clean up an oil spill in a relaxing, low-poly ocean environment as you restore nature.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/2240080/Spilled/"
+    }
+  },
+  "Toem": {
+    "steamAppId": 1307580,
+    "tags": ["collecting", "relationship building", "relaxing", "casual", "wholesome", "cute", "calming", "nature", "village", "music", "short", "heartfelt", "funny", "emotional", "linear", "fantasy", "magic", "adventure", "puzzle", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Toem.jpeg",
+    "description": "Embark on a whimsical journey and solve puzzles using photography in a charming black-and-white world.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1307580/TOEM_A_Photo_Adventure/",
+      "switch": "https://linkly.link/2Etbd",
+      "playstation": "https://linkly.link/2CQeo",
+      "xbox": "https://linkly.link/2EUIA"
+    }
+  },
+  "Paper Trail": {
+    "steamAppId": 1889740,
+    "tags": ["collecting", "relaxing", "casual", "wholesome", "cute", "calming", "nature", "story-rich", "short", "heartfelt", "emotional", "fantasy", "magic", "mythology", "adventure", "puzzle", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Paper-Trail.jpg",
+    "description": "A top-down puzzle adventure about leaving home, set in a foldable paper world full of mysteries.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1889740/Paper_Trail/",
+      "switch": "https://linkly.link/2Etc7",
+      "playstation": "https://linkly.link/2D289",
+      "xbox": "https://linkly.link/2EUIC"
+    }
+  },
+  "Love, Ghostie": {
+    "steamAppId": 1789490,
+    "tags": ["business management", "relationship building", "romance", "relaxing", "wholesome", "cute", "calming", "story-rich", "funny", "emotional", "lgbtq+", "supernatural", "ghosts", "life simulation", "visual novel", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Love-Ghostie.jpg",
+    "description": "Play as a helpful ghost matchmaker who helps guests at a B&B find love and closure.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1789490/Love_Ghostie/"
+    }
+  },
+  "Little Kitty, Big City": {
+    "steamAppId": 1177980,
+    "tags": ["collecting", "relaxing", "casual", "wholesome", "cute", "calming", "nature", "village", "funny", "open world", "life simulation", "sandbox", "puzzle", "platforming", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Little-Kitty-Big-City.jpg",
+    "description": "Explore a vibrant city as a curious cat, causing chaos, helping humans, and collecting hats.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1177980/Little_Kitty_Big_City/",
+      "switch": "https://linkly.link/2Etco",
+      "xbox": "https://linkly.link/2EUIF"
+    }
+  },
+  "Cozy Caravan": {
+    "steamAppId": 2788520,
+    "tags": ["business management", "relationship building", "casual", "wholesome", "cute", "calming", "village", "heartfelt", "open world", "fantasy", "life simulation", "adventure", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Cozy-Caravan.jpg",
+    "description": "Trade goods, make friends, and explore a beautiful world in your customizable cozy caravan.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/2788520/Cozy_Caravan/"
+    }
+  },
+  "Hello Kitty Island Adventure": {
+    "steamAppId": 2495100,
+    "tags": ["farming", "fishing", "crafting", "cooking", "building", "decorating", "collecting", "relationship building", "animal care", "romance", "relaxing", "casual", "wholesome", "cute", "calming", "nature", "village", "story-rich", "heartfelt", "funny", "open world", "fantasy", "life simulation", "adventure", "platforming", "single-player", "co-op", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Hello-Kitty-Island-Adventure.webp",
+    "description": "Join Hello Kitty and friends on a relaxing island getaway filled with friendship, crafting, and exploration.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/2495100/Hello_Kitty_Island_Adventure/",
+      "switch": "https://linkly.link/2EtdU"
+    }
+  },
+  "Minami Lane": {
+    "steamAppId": 2678990,
+    "tags": ["building", "decorating", "business management", "relaxing", "casual", "wholesome", "cute", "calming", "village", "short", "heartfelt", "linear", "life simulation", "strategy", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Minami-Lane.jpg",
+    "description": "Build and manage a nostalgic Japanese street in this short and relaxing sim.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/2678990/Minami_Lane/",
+      "switch": "https://linkly.link/2EtdZ"
+    }
+  },
+  "Critter Cove": {
+    "steamAppId": 1631470,
+    "tags": ["farming", "fishing", "crafting", "building", "decorating", "collecting", "business management", "relationship building", "animal care", "relaxing", "casual", "wholesome", "cute", "calming", "nature", "village", "story-rich", "heartfelt", "open world", "fantasy", "life simulation", "adventure", "single-player", "co-op", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Critter-Cove.jpg",
+    "description": "Rebuild a tropical town and befriend quirky animal residents in this cozy life sim adventure.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1631470/Critter_Cove/"
+    }
+  },
+  "Sugardew Island": {
+    "steamAppId": 2711030,
+    "tags": ["farming", "cooking", "mining", "building", "decorating", "collecting", "business management", "animal care", "relaxing", "casual", "wholesome", "cute", "calming", "nature", "village", "heartfelt", "open world", "fantasy", "life simulation", "adventure", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Sugardew-Island.jpg",
+    "description": "Grow crops, cook meals, and care for animals on a magical island full of kindness.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/2711030/Sugardew_Island__Your_cozy_farm_shop/",
+      "switch": "https://linkly.link/2EvsQ",
+      "playstation": "https://linkly.link/2D28D"
+    }
+  },
+  "Lonesome Village": {
+    "steamAppId": 1418360,
+    "tags": ["crafting", "collecting", "relationship building", "relaxing", "casual", "wholesome", "cute", "calming", "village", "story-rich", "heartfelt", "mystery", "fantasy", "magic", "life simulation", "adventure", "puzzle", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Lonesome-Village.jpg",
+    "description": "A puzzle-solving life sim adventure where you restore a quiet village and uncover mysteries.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1418360/Lonesome_Village/",
+      "switch": "https://linkly.link/2Evto",
+      "xbox": "https://linkly.link/2EUIH"
+    }
+  },
+  "Lake": {
+    "steamAppId": 1118240,
+    "tags": ["collecting", "relationship building", "relaxing", "casual", "wholesome", "calming", "nature", "village", "story-rich", "heartfelt", "emotional", "open world", "life simulation", "adventure", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Lake.jpg",
+    "description": "A relaxing narrative game where you deliver mail in a small town and reconnect with people.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1118240/Lake/",
+      "switch": "https://linkly.link/2Evue",
+      "playstation": "https://linkly.link/2D28i",
+      "xbox": "https://linkly.link/2EUIJ"
+    }
+  },
+  "Fruitbus": {
+    "steamAppId": 2484130,
+    "tags": ["cooking", "business management", "relationship building", "relaxing", "casual", "wholesome", "cute", "calming", "nature", "heartfelt", "funny", "open world", "fantasy", "life simulation", "adventure", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Fruitbus.jpg",
+    "description": "A cozy cooking and exploration game where you travel in a food truck serving heartwarming meals.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/2484130/Fruitbus/"
+    }
+  },
+  "Tavern Talk": {
+    "steamAppId": 2076140,
+    "tags": ["business management", "relationship building", "relaxing", "casual", "wholesome", "cute", "calming", "village", "story-rich", "heartfelt", "emotional", "lgbtq+", "fantasy", "magic", "visual novel", "adventure", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Tavern-Talk.jpg",
+    "description": "Serve drinks and advice in a cozy tavern in this narrative-driven bartending game.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/2076140/Tavern_Talk/",
+      "switch": "https://linkly.link/2EvvS"
+    }
+  },
+  "Book Bound": {
+    "steamAppId": 3320800,
+    "tags": ["building", "decorating", "collecting", "business management", "relationship building", "cleaning", "relaxing", "casual", "wholesome", "cute", "calming", "village", "story-rich", "heartfelt", "fantasy", "magic", "life simulation", "puzzle", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Book-Bound.jpg",
+    "description": "A puzzle adventure through storybook worlds where you repair broken narratives and meet quirky characters.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/3320800/Book_Bound/"
+    }
+  },
+  "Cozy Grove": {
+    "steamAppId": 1458100,
+    "tags": ["crafting", "decorating", "collecting", "relationship building", "relaxing", "wholesome", "cute", "calming", "spooky", "nature", "village", "story-rich", "heartfelt", "emotional", "open world", "supernatural", "ghosts", "life simulation", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Cozy-Grove.jpg",
+    "description": "A life sim set on a haunted island where you help ghostly bear spirits and decorate your campsite.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1458100/Cozy_Grove/",
+      "switch": "https://linkly.link/2Evvm",
+      "playstation": "https://linkly.link/2D28r",
+      "xbox": "https://linkly.link/2EUIL"
+    }
+  },
+  "Wylde Flowers": {
+    "steamAppId": 1896700,
+    "tags": ["farming", "fishing", "crafting", "cooking", "building", "decorating", "collecting", "relationship building", "animal care", "romance", "relaxing", "wholesome", "cute", "calming", "nature", "village", "story-rich", "heartfelt", "emotional", "lgbtq+", "open world", "fantasy", "magic", "supernatural", "witches", "life simulation", "adventure", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Wylde-Flowers.jpg",
+    "description": "A cozy farming sim with a magical twist where you play as a witch balancing daily life and spellcraft.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1896700/Wylde_Flowers/",
+      "switch": "https://linkly.link/2Exih"
+    }
+  },
+  "Lil Gator Game": {
+    "steamAppId": 1586800,
+    "tags": ["collecting", "relaxing", "casual", "wholesome", "cute", "calming", "nature", "heartfelt", "funny", "open world", "fantasy", "sandbox", "adventure", "puzzle", "platforming", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Lil-Gator.jpg",
+    "description": "Explore a cute open world as a playful gator, helping friends and climbing everything in sight.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1586800/Lil_Gator_Game/",
+      "switch": "https://linkly.link/2Exiq",
+      "playstation": "https://linkly.link/2D29A",
+      "xbox": "https://linkly.link/2EUJ0"
+    }
+  },
+  "A Short Hike": {
+    "steamAppId": 1055540,
+    "tags": ["collecting", "relaxing", "casual", "wholesome", "cute", "calming", "nature", "story-rich", "heartfelt", "open world", "sandbox", "adventure", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/A-short-Hike-1.jpg",
+    "description": "Hike, glide, and climb your way through a peaceful mountain park in this charming exploration game.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1055540/A_Short_Hike/",
+      "switch": "https://linkly.link/2Exiv",
+      "playstation": "https://linkly.link/2D2Ao",
+      "xbox": "https://linkly.link/2EUJ3"
+    }
+  },
+  "Cat Cafe Manager": {
+    "steamAppId": 1354830,
+    "tags": ["building", "decorating", "business management", "relationship building", "animal care", "relaxing", "casual", "wholesome", "cute", "calming", "village", "heartfelt", "open world", "life simulation", "strategy", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Cat-Cafe-Manager.jpg",
+    "description": "Renovate and run your own cat café, hiring staff, adopting cats, and pleasing quirky customers.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1354830/Cat_Cafe_Manager/",
+      "switch": "https://linkly.link/2Exj7"
+    }
+  },
+  "Dancing Pandas: Ranger's Path": {
+    "steamAppId": 3074990,
+    "tags": ["mining", "collecting", "cleaning", "relaxing", "casual", "wholesome", "cute", "calming", "nature", "short", "heartfelt", "mystery", "funny", "emotional", "open world", "adventure", "puzzle", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Dancing-Pandas-Rangers-Path.jpg",
+    "description": "Help panda rangers restore the forest in this cozy rhythm and nature sim.",
+    "review": "https://www.thecozygamers.com/dancing-pandas-rangers-path-is-a-wholesome-and-heartfelt-experience/",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/3074990/Dancing_Pandas_Rangers_Path/"
+    }
+  },
+  "Space Sprouts": {
+    "steamAppId": 2790020,
+    "tags": ["collecting", "relaxing", "casual", "wholesome", "cute", "calming", "multiple endings", "short", "replayable", "heartfelt", "funny", "emotional", "linear", "sci-fi", "space", "sandbox", "puzzle", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Space-Sprouts-Box-Art.png",
+    "description": "Grow plants and explore alien worlds in this relaxing space gardening game.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/2790020/Space_Sprouts/"
+    }
+  },
+  "Spiritfarer": {
+    "steamAppId": 972660,
+    "tags": ["farming", "fishing", "crafting", "cooking", "building", "decorating", "collecting", "business management", "relationship building", "animal care", "relaxing", "wholesome", "cute", "calming", "nature", "story-rich", "heartfelt", "emotional", "lgbtq+", "open world", "fantasy", "supernatural", "ghosts", "life simulation", "adventure", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Spiritfarer-1.jpg",
+    "description": "Guide spirits to the afterlife in this heartfelt management and crafting sim.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/972660/Spiritfarer/",
+      "switch": "https://linkly.link/2ExjM",
+      "playstation": "https://linkly.link/2D2Cg",
+      "xbox": "https://linkly.link/2EUJg"
+    }
+  },
+  "Animal Crossing: New Horizons": {
+    "steamAppId": null,
+    "tags": ["farming", "fishing", "crafting", "mining", "building", "decorating", "collecting", "creature collection", "relationship building", "relaxing", "casual", "wholesome", "cute", "calming", "nature", "village", "replayable", "funny", "lgbtq+", "life simulation", "sandbox", "single-player", "multiplayer", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Animal-Crossing-New-Horizons.jpg",
+    "description": "Build your dream island life in this iconic cozy and social simulation.",
+    "stores": {
+      "switch": "https://linkly.link/2Exjk"
+    }
+  },
+  "The Sims 2": {
+    "steamAppId": 3314070,
+    "tags": ["farming", "fishing", "crafting", "cooking", "building", "decorating", "business management", "relationship building", "animal care", "romance", "cleaning", "relaxing", "casual", "replayable", "dramatic", "funny", "emotional", "lgbtq+", "magic", "supernatural", "life simulation", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/The-Sims-2-Cover-Art.jpg",
+    "description": "Live out your dream lives in this beloved life simulation classic.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/3314070/The_Sims_2_Legacy_Collection/"
+    }
+  },
+  "The Sims 3": {
+    "steamAppId": 47890,
+    "tags": ["farming", "fishing", "crafting", "cooking", "building", "decorating", "collecting", "business management", "relationship building", "animal care", "romance", "cleaning", "relaxing", "casual", "replayable", "dramatic", "funny", "emotional", "lgbtq+", "open world", "magic", "supernatural", "sci-fi", "time travel", "ghosts", "zombies", "witches", "mermaids", "life simulation", "sandbox", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/The-Sims-3.jpg",
+    "description": "Control every detail of your Sims' lives in a rich open world.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/47890/The_Sims_3/"
+    }
+  },
+  "The Sims 4": {
+    "steamAppId": 1222670,
+    "tags": ["farming", "fishing", "cooking", "building", "decorating", "business management", "relationship building", "animal care", "romance", "cleaning", "relaxing", "casual", "replayable", "dramatic", "funny", "emotional", "lgbtq+", "magic", "supernatural", "ghosts", "zombies", "witches", "life simulation", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/The-Sims-4.jpg",
+    "description": "Create and control Sims in this detailed life simulation experience.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1222670/The_Sims_4/",
+      "playstation": "https://linkly.link/2D2D2",
+      "xbox": "https://linkly.link/2EUKL"
+    }
+  },
+  "inZOI": {
+    "steamAppId": 2456740,
+    "tags": ["building", "decorating", "relationship building", "romance", "cleaning", "relaxing", "casual", "wholesome", "cute", "calming", "replayable", "funny", "lgbtq+", "open world", "life simulation", "sandbox", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Inzoi.jpg",
+    "description": "A realistic life simulator with detailed customization and immersive environments.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/2456740/inZOI/"
+    }
+  },
+  "My Time at Portia": {
+    "steamAppId": 666140,
+    "tags": ["farming", "fishing", "crafting", "cooking", "building", "decorating", "collecting", "business management", "relationship building", "animal care", "romance", "relaxing", "casual", "wholesome", "cute", "calming", "nature", "village", "story-rich", "heartfelt", "open world", "fantasy", "life simulation", "rpg", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/My-TIme-At-Portia.jpeg",
+    "description": "Rebuild your workshop and befriend villagers in this cozy crafting sim.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/666140/My_Time_at_Portia/",
+      "switch": "https://linkly.link/2Exmw",
+      "playstation": "https://linkly.link/2D2DM",
+      "xbox": "https://linkly.link/2EUKg"
+    }
+  },
+  "My Time at Sandrock": {
+    "steamAppId": 1084600,
+    "tags": ["farming", "fishing", "crafting", "cooking", "building", "decorating", "collecting", "business management", "relationship building", "animal care", "romance", "relaxing", "casual", "wholesome", "cute", "calming", "post apocalyptic", "dystopian", "nature", "village", "story-rich", "heartfelt", "open world", "fantasy", "life simulation", "rpg", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/My-Time-At-Sandrock.webp",
+    "description": "A post-apocalyptic life sim where you build, farm, and explore in a desert town.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1084600/My_Time_at_Sandrock/",
+      "playstation": "https://linkly.link/2D2Y5",
+      "xbox": "https://linkly.link/2EUL2"
+    }
+  },
+  "Ooblets": {
+    "steamAppId": 593150,
+    "tags": ["farming", "crafting", "decorating", "collecting", "business management", "creature collection", "relationship building", "relaxing", "casual", "wholesome", "cute", "calming", "village", "music", "funny", "open world", "fantasy", "life simulation", "rpg", "single-player"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Ooblets.jpeg",
+    "description": "A creature-collecting, dancing, farming life sim with adorable ooblets.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/593150/Ooblets/",
+      "switch": "https://linkly.link/2ExnV",
+      "xbox": "https://linkly.link/2EUMl"
+    }
+  },
+  "Firewatch": {
+    "steamAppId": 383870,
+    "tags": ["relationship building", "relaxing", "casual", "calming", "nature", "story-rich", "mystery", "dramatic", "emotional", "open world", "adventure", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Firewatch.jpg",
+    "description": "A narrative-driven mystery game set in the Wyoming wilderness.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/383870/Firewatch/",
+      "switch": "https://linkly.link/2ExnJ",
+      "playstation": "https://linkly.link/2D2b3",
+      "xbox": "https://linkly.link/2EUMo"
+    }
+  },
+  "Mini Motorways": {
+    "steamAppId": 1127500,
+    "tags": ["casual", "calming", "strategy", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Mini-Motorways.jpg",
+    "description": "A minimalist strategy game about designing a road network for a growing city.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1127500/Mini_Motorways/"
+    }
+  },
+  "Cities: Skylines": {
+    "steamAppId": 255710,
+    "tags": ["building", "decorating", "business management", "relaxing", "calming", "replayable", "open world", "sandbox", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Cities-Skylines.jpg",
+    "description": "A modern city-building game with in-depth management mechanics.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/255710/Cities_Skylines/",
+      "playstation": "https://linkly.link/2D2bB",
+      "xbox": "https://linkly.link/2EUMu"
+    }
+  },
+  "Fields of Mistria": {
+    "steamAppId": 2142790,
+    "tags": ["farming", "fishing", "crafting", "cooking", "building", "decorating", "collecting", "relationship building", "animal care", "romance", "relaxing", "wholesome", "cute", "calming", "nature", "village", "story-rich", "heartfelt", "emotional", "fantasy", "life simulation", "rpg", "single-player"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Fields-of-Mistria.jpeg",
+    "description": "A fantasy farming and life sim with RPG elements and romance.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/2142790/Fields_of_Mistria/"
+    }
+  },
+  "Sky: Children of the Light": {
+    "steamAppId": 2325290,
+    "tags": ["collecting", "relaxing", "casual", "wholesome", "calming", "nature", "heartfelt", "emotional", "fantasy", "adventure", "multiplayer"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Sky-Children-Of-the-Light.jpeg",
+    "description": "A social adventure game focused on exploration, flight, and emotion.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/2325290/Sky_Children_of_the_Light/",
+      "playstation": "https://linkly.link/2D2bZ"
+    }
+  },
+  "Infinity Nikki": {
+    "steamAppId": 3164330,
+    "tags": ["decorating", "collecting", "cute", "calming", "fantasy", "magic", "life simulation", "single-player"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Infinity-Nikki.jpg",
+    "description": "An open-world dress-up adventure game set in a magical fantasy world.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/3164330/Infinity_Nikki/",
+      "playstation": "https://linkly.link/2DLIf"
+    }
+  },
+  "Unpacking": {
+    "steamAppId": 1135690,
+    "tags": ["decorating", "cleaning", "relaxing", "casual", "wholesome", "calming", "story-rich", "heartfelt", "emotional", "puzzle", "single-player"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Unpacking.jpg",
+    "description": "A zen puzzle game about unpacking and discovering a character's story.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1135690/Unpacking/",
+      "switch": "https://linkly.link/2Exnv",
+      "playstation": "https://linkly.link/2DLJl",
+      "xbox": "https://linkly.link/2EUMx"
+    }
+  },
+  "Strange Horticulture": {
+    "steamAppId": 1574580,
+    "tags": ["collecting", "spooky", "dark", "story-rich", "mystery", "magic", "supernatural", "puzzle", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Strange-Horticulture-1.jpg",
+    "description": "An occult puzzle game where you run a mysterious plant shop.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1574580/Strange_Horticulture/",
+      "switch": "https://linkly.link/2ExoV",
+      "playstation": "https://linkly.link/2DLKX",
+      "xbox": "https://linkly.link/2EUNm"
+    }
+  },
+  "Disney Dreamlight Valley": {
+    "steamAppId": 1401590,
+    "tags": ["farming", "fishing", "crafting", "cooking", "building", "decorating", "collecting", "business management", "relationship building", "animal care", "relaxing", "casual", "wholesome", "cute", "calming", "village", "story-rich", "heartfelt", "mystery", "dramatic", "emotional", "open world", "fantasy", "magic", "witches", "life simulation", "adventure", "single-player"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Disney-Dreamlight-Valley.jpeg",
+    "description": "A cozy life sim filled with Disney and Pixar characters where you restore a magical village.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1401590/Disney_Dreamlight_Valley/",
+      "switch": "https://linkly.link/2Exoy",
+      "playstation": "https://linkly.link/2DLLh",
+      "xbox": "https://linkly.link/2EUPQ"
+    }
+  },
+  "Coffee Talk": {
+    "steamAppId": 914800,
+    "tags": ["cooking", "relationship building", "relaxing", "casual", "wholesome", "calming", "story-rich", "heartfelt", "emotional", "lgbtq+", "fantasy", "supernatural", "visual novel", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Coffee-Talk.jpg",
+    "description": "A visual novel where you brew drinks and listen to the problems of fantasy customers in a late-night coffee shop.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/914800/Coffee_Talk/",
+      "switch": "https://linkly.link/2ExxM",
+      "playstation": "https://linkly.link/2DLML",
+      "xbox": "https://linkly.link/2EUPZ"
+    }
+  },
+  "Call of Boba": {
+    "steamAppId": 2342690,
+    "tags": ["farming", "fishing", "cooking", "decorating", "collecting", "business management", "relationship building", "romance", "relaxing", "casual", "wholesome", "cute", "heartfelt", "funny", "open world", "life simulation", "single-player"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Call-Of-Boba.jpg",
+    "description": "Run a cute boba tea stand, serve drinks, and chat with quirky customers.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/2342690/Call_of_Boba/"
+    }
+  },
+  "Spirit of the North": {
+    "steamAppId": 1213700,
+    "tags": ["collecting", "relaxing", "calming", "nature", "heartfelt", "emotional", "open world", "fantasy", "supernatural", "mythology", "adventure", "puzzle", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Spirit-of-the-North.png",
+    "description": "A serene adventure game inspired by Nordic folklore where you play as a fox guided by a spirit.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1213700/Spirit_of_the_North/",
+      "switch": "https://linkly.link/2Exxi",
+      "playstation": "https://linkly.link/2DLN3",
+      "xbox": "https://linkly.link/2EUPi"
+    }
+  },
+  "Neva": {
+    "steamAppId": 2420660,
+    "tags": ["collecting", "relationship building", "relaxing", "calming", "nature", "story-rich", "heartfelt", "emotional", "open world", "fantasy", "supernatural", "adventure", "puzzle", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Neva.jpg",
+    "description": "Follow a young woman and a mystical wolf as they journey through a dying world teeming with danger and beauty.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/2420660/Neva/",
+      "switch": "https://linkly.link/2Exye",
+      "playstation": "https://linkly.link/2DLQI",
+      "xbox": "https://linkly.link/2EUPn"
+    }
+  },
+  "Wytchwood": {
+    "steamAppId": 729000,
+    "tags": ["farming", "crafting", "cooking", "collecting", "wholesome", "cute", "calming", "spooky", "story-rich", "funny", "open world", "fantasy", "magic", "supernatural", "mythology", "witches", "puzzle", "single-player"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Wytchwood.jpg",
+    "description": "A crafting adventure where you play as a witch collecting ingredients and solving puzzles in a strange fairy tale world.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/729000/Wytchwood/",
+      "switch": "https://linkly.link/2Exyq",
+      "playstation": "https://linkly.link/2DLR5",
+      "xbox": "https://linkly.link/2EYh8"
+    }
+  },
+  "Lemon Cake": {
+    "steamAppId": 1338330,
+    "tags": ["farming", "crafting", "cooking", "decorating", "business management", "cleaning", "relaxing", "casual", "wholesome", "cute", "calming", "village", "heartfelt", "ghosts", "life simulation", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Lemon-Cake.jpg",
+    "description": "Restore an abandoned bakery and bake sweet treats in this charming time management sim.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1338330/Lemon_Cake/",
+      "switch": "https://linkly.link/2F2Zy",
+      "playstation": "https://linkly.link/2DLRq",
+      "xbox": "https://linkly.link/2EYhG"
+    }
+  },
+  "Paleo Pines": {
+    "steamAppId": 1202200,
+    "tags": ["farming", "building", "decorating", "collecting", "relationship building", "animal care", "relaxing", "wholesome", "cute", "calming", "nature", "heartfelt", "mystery", "open world", "fantasy", "life simulation", "single-player"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Paleo-Pines.jpg",
+    "description": "Tame dinosaurs and build a ranch in a colorful, cozy world.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1202200/Paleo_Pines/",
+      "switch": "https://linkly.link/2F2aZ",
+      "playstation": "https://linkly.link/2DLSU",
+      "xbox": "https://linkly.link/2EYhO"
+    }
+  },
+  "Cult of the Lamb": {
+    "steamAppId": 1313140,
+    "tags": ["farming", "crafting", "cooking", "building", "decorating", "collecting", "relationship building", "animal care", "romance", "cleaning", "relaxing", "cute", "spooky", "dark", "nature", "village", "story-rich", "replayable", "dramatic", "funny", "linear", "adventure", "single-player", "co-op", "multiplayer", "roguelike"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Cult-of-the-Lamb.jpg",
+    "description": "Start your own cult in a cute but dark world filled with ritual, dungeon crawling, and base building.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1313140/Cult_of_the_Lamb/",
+      "switch": "https://linkly.link/2F2av",
+      "playstation": "https://linkly.link/2DLT0",
+      "xbox": "https://linkly.link/2EYhb"
+    }
+  },
+  "Sun Haven": {
+    "steamAppId": 1432860,
+    "tags": ["farming", "fishing", "crafting", "cooking", "mining", "building", "decorating", "collecting", "relationship building", "animal care", "romance", "wholesome", "cute", "calming", "nature", "village", "story-rich", "heartfelt", "open world", "fantasy", "magic", "supernatural", "life simulation", "rpg", "single-player", "co-op", "multiplayer"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Sun-Haven.jpg",
+    "description": "A fantasy farming sim where you grow crops, raise animals, and master magic in a multiplayer world.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1432860/Sun_Haven/"
+    }
+  },
+  "Roots of Pacha": {
+    "steamAppId": 1245560,
+    "tags": ["farming", "fishing", "crafting", "cooking", "building", "decorating", "collecting", "relationship building", "animal care", "romance", "relaxing", "wholesome", "cute", "calming", "historical", "nature", "village", "story-rich", "heartfelt", "open world", "mythology", "life simulation", "single-player", "co-op"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Roots-Of-Pacha-1.jpg",
+    "description": "A Stone Age farming sim where you develop a village, befriend animals, and explore early civilization.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1245560/Roots_of_Pacha/",
+      "switch": "https://linkly.link/2F2bl",
+      "playstation": "https://linkly.link/2DUK2",
+      "xbox": "https://linkly.link/2EYlf"
+    }
+  },
+  "Coral Island": {
+    "steamAppId": 1158160,
+    "tags": ["farming", "fishing", "crafting", "cooking", "mining", "building", "decorating", "collecting", "business management", "creature collection", "relationship building", "animal care", "romance", "cleaning", "relaxing", "casual", "wholesome", "cute", "calming", "nature", "village", "story-rich", "replayable", "heartfelt", "mystery", "funny", "emotional", "lgbtq+", "open world", "fantasy", "magic", "supernatural", "mythology", "life simulation", "single-player"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Coral-Island.jpg",
+    "description": "A tropical farming sim with environmental themes, diving, and community development.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1158160/Coral_Island/",
+      "playstation": "https://linkly.link/2DUPv",
+      "xbox": "https://linkly.link/2EYlh"
+    }
+  },
+  "Potion Permit": {
+    "steamAppId": 1337760,
+    "tags": ["fishing", "crafting", "building", "decorating", "collecting", "business management", "relationship building", "relaxing", "casual", "wholesome", "calming", "village", "story-rich", "heartfelt", "emotional", "open world", "fantasy", "magic", "life simulation", "rpg", "single-player"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Potion-Permit.jpg",
+    "description": "Play as a chemist in a pixel art village, diagnose illnesses and craft potions for townsfolk.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1337760/Potion_Permit/",
+      "switch": "https://linkly.link/2F2hv",
+      "playstation": "https://linkly.link/2DUQe",
+      "xbox": "https://linkly.link/2EYln"
+    }
+  },
+  "Littlewood": {
+    "steamAppId": 894940,
+    "tags": ["farming", "fishing", "crafting", "building", "decorating", "collecting", "business management", "creature collection", "relationship building", "animal care", "romance", "relaxing", "casual", "wholesome", "cute", "calming", "village", "story-rich", "heartfelt", "emotional", "fantasy", "life simulation", "rpg", "single-player"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Littlewood.png",
+    "description": "Build a town and form relationships after saving the world in this relaxing RPG sim.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/894940/Littlewood/",
+      "switch": "https://linkly.link/2F2i8"
+    }
+  },
+  "Potion Craft": {
+    "steamAppId": 1210320,
+    "tags": ["farming", "crafting", "collecting", "business management", "casual", "calming", "fantasy", "magic", "life simulation", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Potion-Craft.jpg",
+    "description": "A medieval alchemist sim where you physically mix ingredients and craft potions.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1210320/Potion_Craft_Alchemist_Simulator/",
+      "switch": "https://linkly.link/2F2iK",
+      "playstation": "https://linkly.link/2DUU5",
+      "xbox": "https://linkly.link/2EYm0"
+    }
+  },
+  "Slime Rancher": {
+    "steamAppId": 433340,
+    "tags": ["farming", "collecting", "business management", "creature collection", "relaxing", "wholesome", "cute", "calming", "nature", "heartfelt", "sci-fi", "space", "life simulation", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Slime-Rancher.jpg",
+    "description": "Manage a slime farm on a faraway planet, collecting and breeding adorable slimes.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/433340/Slime_Rancher/",
+      "switch": "https://linkly.link/2F2j0",
+      "playstation": "https://linkly.link/2DUWd",
+      "xbox": "https://linkly.link/2EYmH"
+    }
+  },
+  "Slime Rancher 2": {
+    "steamAppId": 1657630,
+    "tags": ["farming", "collecting", "business management", "creature collection", "relaxing", "wholesome", "cute", "calming", "nature", "heartfelt", "sci-fi", "space", "life simulation", "single-player"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Slime-Rancher-2.png",
+    "description": "The sequel to the beloved slime sim, featuring new slimes and an open-world island.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1657630/Slime_Rancher_2/",
+      "playstation": "https://linkly.link/2DV4T",
+      "xbox": "https://linkly.link/2EiKy"
+    }
+  },
+  "The Cosmic Wheel Sisterhood": {
+    "steamAppId": 1340480,
+    "tags": ["collecting", "calming", "dark", "story-rich", "branching story", "replayable", "mystery", "dramatic", "emotional", "lgbtq+", "political", "fantasy", "magic", "supernatural", "witches", "visual novel", "adventure", "card game", "single-player"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Cosmic-Wheel-Sisterhood.jpeg",
+    "description": "A narrative-driven deckbuilding game about witches, fate, and branching storytelling.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1340480/The_Cosmic_Wheel_Sisterhood/"
+    }
+  },
+  "Graveyard Keeper": {
+    "steamAppId": 599140,
+    "tags": ["farming", "crafting", "collecting", "business management", "relationship building", "spooky", "dark", "historical", "story-rich", "mystery", "funny", "fantasy", "supernatural", "life simulation", "single-player"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Graveyard-Keeper.jpg",
+    "description": "A darkly humorous cemetery sim where you manage a medieval graveyard and craft supplies.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/599140/Graveyard_Keeper/",
+      "switch": "https://linkly.link/2F2jY",
+      "playstation": "https://linkly.link/2DiXp",
+      "xbox": "https://linkly.link/2EiL3"
+    }
+  },
+  "Planet Zoo": {
+    "steamAppId": 703080,
+    "tags": ["building", "decorating", "business management", "creature collection", "animal care", "cleaning", "relaxing", "casual", "wholesome", "cute", "calming", "life simulation", "sandbox", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Planet-Zoo.jpg",
+    "description": "Build and manage a zoo with detailed animal behavior and expansive creativity tools.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/703080/Planet_Zoo/",
+      "playstation": "https://linkly.link/2DiYO",
+      "xbox": "https://linkly.link/2EiL7"
+    }
+  },
+  "Planet Coaster": {
+    "steamAppId": 493340,
+    "tags": ["building", "decorating", "business management", "cleaning", "relaxing", "casual", "wholesome", "cute", "calming", "life simulation", "sandbox", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Planet-Coaster.jpg",
+    "description": "Design and manage your own theme park with thrilling roller coasters and attractions.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/493340/Planet_Coaster/",
+      "playstation": "https://linkly.link/2DoLj",
+      "xbox": "https://linkly.link/2EiLM"
+    }
+  },
+  "Planet Coaster 2": {
+    "steamAppId": 2688950,
+    "tags": ["building", "decorating", "business management", "cleaning", "relaxing", "casual", "wholesome", "cute", "calming", "life simulation", "sandbox", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Planet-Coaster-2.jpg",
+    "description": "The next generation of theme park creation, featuring deeper tools and more customization.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/2688950/Planet_Coaster_2/",
+      "playstation": "https://linkly.link/2EAcU",
+      "xbox": "https://linkly.link/2EiLV"
+    }
+  },
+  "House Flipper": {
+    "steamAppId": 613100,
+    "tags": ["building", "decorating", "business management", "cleaning", "relaxing", "casual", "wholesome", "cute", "calming", "life simulation", "sandbox", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/House-Flipper.jpg",
+    "description": "Buy, renovate, and sell houses in this satisfying home makeover simulation game.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/613100/House_Flipper/",
+      "switch": "https://linkly.link/2F2jo",
+      "playstation": "https://linkly.link/2EAef",
+      "xbox": "https://linkly.link/2EiYE"
+    }
+  },
+  "House Flipper 2": {
+    "steamAppId": 1190970,
+    "tags": ["building", "decorating", "business management", "cleaning", "relaxing", "casual", "wholesome", "cute", "calming", "life simulation", "sandbox", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/House-Flipper-2.jpg",
+    "description": "A more advanced renovation experience with new mechanics and expanded customization options.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1190970/House_Flipper_2/",
+      "playstation": "https://linkly.link/2EAg3",
+      "xbox": "https://linkly.link/2EiYY"
+    }
+  },
+  "TCG Card Shop Simulator": {
+    "steamAppId": 3070070,
+    "tags": ["building", "decorating", "business management", "cleaning", "relaxing", "casual", "wholesome", "cute", "calming", "life simulation", "sandbox", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/TCG-Card-Simulator.jpg",
+    "description": "Run your own card shop, manage inventory, and build your collection in this business sim.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/3070070/TCG_Card_Shop_Simulator/"
+    }
+  },
+  "PowerWash Simulator": {
+    "steamAppId": 1290000,
+    "tags": ["building", "decorating", "business management", "cleaning", "relaxing", "casual", "wholesome", "cute", "calming", "life simulation", "sandbox", "single-player", "co-op", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/PowerWash-Simulator.jpg",
+    "description": "Relax and clean your way through satisfying power washing jobs.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1290000/PowerWash_Simulator/",
+      "switch": "https://linkly.link/2F2jw",
+      "playstation": "https://linkly.link/2EAgT",
+      "xbox": "https://linkly.link/2EiZn"
+    }
+  },
+  "Dave the Diver": {
+    "steamAppId": 1868140,
+    "tags": ["fishing", "cooking", "decorating", "collecting", "business management", "cleaning", "relaxing", "casual", "wholesome", "calming", "nature", "story-rich", "mystery", "funny", "open world", "fantasy", "supernatural", "mermaids", "life simulation", "adventure", "rpg", "strategy", "single-player"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Dave-the-Diver.jpg",
+    "description": "Explore the deep sea by day and run a sushi bar by night in this quirky adventure.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1868140/DAVE_THE_DIVER/",
+      "switch": "https://linkly.link/2F2k1",
+      "playstation": "https://linkly.link/2EAgu"
+    }
+  },
+  "Two Point Hospital": {
+    "steamAppId": 535930,
+    "tags": ["building", "decorating", "business management", "cleaning", "relaxing", "casual", "calming", "dramatic", "funny", "life simulation", "sandbox", "puzzle", "strategy", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Two-Point-Hospital.jpg",
+    "description": "Build and manage your own whimsical hospital with comical illnesses and treatments.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/535930/Two_Point_Hospital/",
+      "switch": "https://linkly.link/2F2n0",
+      "playstation": "https://linkly.link/2EAhS",
+      "xbox": "https://linkly.link/2Eia2"
+    }
+  },
+  "Two Point Campus": {
+    "steamAppId": 1649080,
+    "tags": ["building", "decorating", "business management", "cleaning", "relaxing", "casual", "calming", "dramatic", "funny", "life simulation", "sandbox", "puzzle", "strategy", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Two-Point-Campus.jpg",
+    "description": "Create your dream university and manage quirky courses and student lives.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1649080/Two_Point_Campus/",
+      "switch": "https://linkly.link/2F2nR",
+      "playstation": "https://linkly.link/2EAhy",
+      "xbox": "https://linkly.link/2Eic5"
+    }
+  },
+  "Two Point Museum": {
+    "steamAppId": 2185060,
+    "tags": ["building", "decorating", "business management", "cleaning", "relaxing", "casual", "calming", "dramatic", "funny", "life simulation", "sandbox", "puzzle", "strategy", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Two-Point-Museum.jpg",
+    "description": "An upcoming quirky sim where you run a strange and creative museum.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/2185060/Two_Point_Museum/",
+      "playstation": "https://linkly.link/2EAiG",
+      "xbox": "https://linkly.link/2Eick"
+    }
+  },
+  "Frog Detective": {
+    "steamAppId": 963000,
+    "tags": ["collecting", "casual", "wholesome", "cute", "calming", "story-rich", "mystery", "funny", "open world", "fantasy", "magic", "supernatural", "witches", "adventure", "single-player"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Frog-Detective.jpg",
+    "description": "A quirky mystery adventure where you play a frog solving light-hearted cases.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/963000/Frog_Detective_1_The_Haunted_Island/",
+      "switch": "https://linkly.link/2F2na",
+      "playstation": "https://linkly.link/2EU9y",
+      "xbox": "https://linkly.link/2Eicz"
+    }
+  },
+  "Venba": {
+    "steamAppId": 1491670,
+    "tags": ["cooking", "romance", "relaxing", "casual", "wholesome", "cute", "historical", "story-rich", "heartfelt", "emotional", "educational", "adventure", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Venba.jpg",
+    "description": "A narrative cooking game exploring culture and family through authentic South Indian recipes.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1491670/Venba/",
+      "switch": "https://linkly.link/2F2nt",
+      "playstation": "https://linkly.link/2EUA0",
+      "xbox": "https://linkly.link/2EidB"
+    }
+  },
+  "Untitled Goose Game": {
+    "steamAppId": 837470,
+    "tags": ["collecting", "relaxing", "casual", "cute", "village", "short", "funny", "puzzle", "single-player", "co-op", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Untitled-Goose-Game.jpg",
+    "description": "Cause playful chaos as a mischievous goose in a charming village.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/837470/Untitled_Goose_Game/",
+      "switch": "https://linkly.link/2F2o4",
+      "playstation": "https://linkly.link/2EUA5",
+      "xbox": "https://linkly.link/2Eidb"
+    }
+  },
+  "Hogwarts Legacy": {
+    "steamAppId": 990080,
+    "tags": ["building", "decorating", "collecting", "creature collection", "animal care", "cleaning", "relaxing", "casual", "spooky", "dark", "nature", "village", "story-rich", "multiple endings", "replayable", "mystery", "crime", "dramatic", "funny", "emotional", "lgbtq+", "open world", "fantasy", "magic", "supernatural", "mythology", "ghosts", "witches", "life simulation", "adventure", "rpg", "puzzle", "platforming", "single-player"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Hogwarts-Legacy.jpg",
+    "description": "Live your wizarding world fantasy in this immersive open-world RPG set in the Harry Potter universe.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/990080/Hogwarts_Legacy/",
+      "switch": "https://linkly.link/2F2oa",
+      "playstation": "https://linkly.link/2EUA7",
+      "xbox": "https://linkly.link/2EieG"
+    }
+  },
+  "Botany Manor": {
+    "steamAppId": 1425350,
+    "tags": ["collecting", "relaxing", "calming", "historical", "story-rich", "mystery", "puzzle", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Botany-Manor.jpg",
+    "description": "Explore a historical English manor and solve botanical puzzles in this cozy mystery game.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1425350/Botany_Manor/",
+      "switch": "https://linkly.link/2F2pC",
+      "playstation": "https://linkly.link/2EUAT",
+      "xbox": "https://linkly.link/2Eien"
+    }
+  },
+  "Monument Valley": {
+    "steamAppId": 1927720,
+    "tags": ["relaxing", "calming", "music", "short", "replayable", "fantasy", "magic", "puzzle", "single-player"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Monument-Valley.jpg",
+    "description": "A beautiful, surreal puzzle game featuring impossible architecture and a silent princess.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1927720/Monument_Valley_Panatoms/",
+      "switch": "https://linkly.link/2F2pZ",
+      "playstation": "https://linkly.link/2EUAk",
+      "xbox": "https://linkly.link/2EifE"
+    }
+  },
+  "Monument Valley 2": {
+    "steamAppId": 1927740,
+    "tags": ["relaxing", "calming", "music", "short", "replayable", "fantasy", "magic", "puzzle", "single-player"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Monument-Valley-2.jpg",
+    "description": "Guide a mother and child through stunning, mind-bending architecture in this elegant puzzle adventure.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1927740/Monument_Valley_2_Panoramic_Edition/",
+      "switch": "https://linkly.link/2F2pi",
+      "playstation": "https://linkly.link/2EUAl",
+      "xbox": "https://linkly.link/2EifP"
+    }
+  },
+  "Journey": {
+    "steamAppId": 638230,
+    "tags": ["relaxing", "calming", "short", "fantasy", "adventure", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Journey.jpg",
+    "description": "An evocative adventure game where you explore a vast desert in search of meaning.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/638230/Journey/",
+      "playstation": "https://linkly.link/2EUAw"
+    }
+  },
+  "ABZU": {
+    "steamAppId": 384190,
+    "tags": ["relaxing", "calming", "short", "fantasy", "adventure", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Abzu.jpg",
+    "description": "A beautiful underwater journey full of life, color, and serenity.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/384190/ABZU/",
+      "switch": "https://linkly.link/2F2ps",
+      "playstation": "https://linkly.link/2EUBn",
+      "xbox": "https://linkly.link/2EifX"
+    }
+  },
+  "Caravan SandWitch": {
+    "steamAppId": 1582650,
+    "tags": ["relaxing", "calming", "story-rich", "open world", "sci-fi", "adventure", "single-player", "no combat"],
+    "image": "https://www.thecozygamers.com/wp-content/uploads/2025/04/Caravan-SandWitch-Art.jpg",
+    "description": "Explore a sci-fantasy desert world in your van and uncover the truth of a lost civilization.",
+    "stores": {
+      "steam": "https://store.steampowered.com/app/1582650/Caravan_SandWitch/",
+      "switch": "https://linkly.link/2F2q0",
+      "playstation": "https://linkly.link/2EUGy"
+    }
+  }
+}
