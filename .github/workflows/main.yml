@@ -24,4 +24,5 @@ jobs:
           port: ${{ secrets.SFTP_PORT }}
           local_path: './recommendation-engine-updated.js'
           remote_path: '/thecozygamers-www/wp-content/uploads/'
+          sftp_only: true
           sftpArgs: '-o ConnectTimeout=10'
