@@ -47,12 +47,13 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("game-results").innerHTML = `<p class="loading-message">Loading games...</p>`;
 
   const gamesUrl        = 'https://raw.githubusercontent.com/HPfan26/cozy-gamers-data/main/games.json';
-  const steamUrl        = 'https://www.thecozygamers.com/wp-content/uploads/steamPrices_multi.json';
-  const steamFallbackUrl= 'https://www.thecozygamers.com/wp-content/uploads/steamPrices_us.json';
-  const playstationUrl  = 'https://www.thecozygamers.com/wp-content/uploads/playstation-prices.json';
-  const nintendoUrl     = 'https://www.thecozygamers.com/wp-content/uploads/dekudeals_prices_all_regions.json';
-  const xboxUrl         = 'https://www.thecozygamers.com/wp-content/uploads/xboxPrices.json';
-  const subscriptionsUrl= 'https://www.thecozygamers.com/wp-content/uploads/subscriptions.json';
+  const cacheBust       = `?v=${Date.now()}`;
+const steamUrl        = `https://www.thecozygamers.com/wp-content/uploads/steamPrices_multi.json${cacheBust}`;
+const steamFallbackUrl= `https://www.thecozygamers.com/wp-content/uploads/steamPrices_us.json${cacheBust}`;
+const playstationUrl  = `https://www.thecozygamers.com/wp-content/uploads/playstation-prices.json${cacheBust}`;
+const nintendoUrl     = `https://www.thecozygamers.com/wp-content/uploads/dekudeals_prices_all_regions.json${cacheBust}`;
+const xboxUrl         = `https://www.thecozygamers.com/wp-content/uploads/xboxPrices.json${cacheBust}`;
+const subscriptionsUrl= `https://www.thecozygamers.com/wp-content/uploads/subscriptions.json${cacheBust}`;
 
   // Detect user country first, then load everything in parallel
   fetch('https://ipapi.co/json/')
