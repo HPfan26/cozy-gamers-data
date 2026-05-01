@@ -14,7 +14,7 @@ jobs:
           node-version: '20'
 
       - name: Install Puppeteer
-        run: npm install puppeteer
+        run: npm install puppeteer puppeteer-extra puppeteer-extra-plugin-stealth
 
       - name: Install Chromium dependencies
         run: |
