@@ -18,12 +18,53 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Run price scraper
+      - name: Install dependencies
+        run: |
+          npm install puppeteer puppeteer-extra puppeteer-extra-plugin-stealth
+
+      - name: Install Chromium system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 \
+            libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 \
+            libxfixes3 libxrandr2 libgbm1 libasound2t64
+
+      # ============================================================
+      # STEAM - via ITAD API (no browser needed)
+      # ============================================================
+      - name: Scrape Steam prices (ITAD)
         env:
           ITAD_API_KEY: ${{ secrets.ITAD_API_KEY }}
         run: node scraper.mjs
 
-      - name: Upload Steam prices to WordPress
+      # ============================================================
+      # PLAYSTATION - via Puppeteer scraper
+      # ============================================================
+      - name: Scrape PlayStation prices
+        run: node scrapePlayStationPrices.js
+
+      # ============================================================
+      # SWITCH - two options available:
+      # Option A: DekuDeals (currently active)
+      # Option B: Nintendo eShop API (comment A, uncomment B)
+      # ============================================================
+      - name: Scrape Switch prices (DekuDeals)
+        run: node scrape-switch-dekudeals.js
+
+      # - name: Scrape Switch prices (Nintendo eShop API)
+      #   run: node scrape-switch-nintendo-api.mjs
+
+      # ============================================================
+      # XBOX - via Puppeteer scraper
+      # ============================================================
+      - name: Scrape Xbox prices
+        run: node scrapeXbox2.js
+
+      # ============================================================
+      # UPLOAD ALL PRICE FILES TO WORDPRESS
+      # ============================================================
+      - name: Upload Steam prices
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
           server: ${{ secrets.SFTP_HOST }}
@@ -35,7 +76,7 @@ jobs:
           sftp_only: true
           sftpArgs: '-o ConnectTimeout=10'
 
-      - name: Upload PlayStation prices to WordPress
+      - name: Upload PlayStation prices
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
           server: ${{ secrets.SFTP_HOST }}
@@ -47,7 +88,7 @@ jobs:
           sftp_only: true
           sftpArgs: '-o ConnectTimeout=10'
 
-      - name: Upload Nintendo prices to WordPress
+      - name: Upload Nintendo Switch prices
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
           server: ${{ secrets.SFTP_HOST }}
@@ -59,7 +100,7 @@ jobs:
           sftp_only: true
           sftpArgs: '-o ConnectTimeout=10'
 
-      - name: Upload Xbox prices to WordPress
+      - name: Upload Xbox prices
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
           server: ${{ secrets.SFTP_HOST }}
