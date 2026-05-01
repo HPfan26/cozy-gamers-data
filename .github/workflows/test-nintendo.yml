@@ -15,8 +15,8 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Run Nintendo API scraper
-        run: node scrape-switch-nintendo-api.mjs
+     - name: Run Switch scraper (DekuDeals)
+  run: node scrape-switch-dekudeals.js
 
       - name: Show results
         run: cat dekudeals_prices_all_regions.json
