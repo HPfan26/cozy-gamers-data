@@ -1,0 +1,22 @@
+name: Test Nintendo Switch Scraper
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-nintendo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Nintendo API scraper
+        run: node scrape-switch-nintendo-api.mjs
+
+      - name: Show results
+        run: cat dekudeals_prices_all_regions.json
