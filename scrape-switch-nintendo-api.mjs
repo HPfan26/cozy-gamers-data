@@ -67,6 +67,9 @@ const games = [
   { title: 'Caravan SandWitch', nsuid: '70010000037487' },
   { title: 'Firewatch', nsuid: '70010000007925' },
   { title: 'Ooblets', nsuid: '70010000048968' },
+  { title: 'Wytchwood', nsuid: '70010000042327' },
+  { title: 'Neva', nsuid: '70010000067709' },
+  { title: 'Palia', nsuid: '70010000064807' },
 ];
 
 function sleep(ms) {
