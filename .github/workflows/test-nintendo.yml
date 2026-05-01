@@ -24,8 +24,8 @@ jobs:
             libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 \
             libxfixes3 libxrandr2 libgbm1 libasound2t64
 
-      - name: Run Switch scraper (DekuDeals)
-        run: node scrape-switch-dekudeals.js
+      - name: Run Switch scraper (Nintendo API)
+        run: node scrape-switch-nintendo-api.mjs
 
       - name: Show results
         run: cat dekudeals_prices_all_regions.json
