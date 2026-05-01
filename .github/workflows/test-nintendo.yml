@@ -1,10 +1,8 @@
-name: Test Nintendo Switch Scraper
-
+name: Test Switch Scraper
 on:
   workflow_dispatch:
-
 jobs:
-  test-nintendo:
+  test-switch:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
@@ -15,8 +13,19 @@ jobs:
         with:
           node-version: '20'
 
-     - name: Run Switch scraper (DekuDeals)
-  run: node scrape-switch-dekudeals.js
+      - name: Install Puppeteer
+        run: npm install puppeteer
+
+      - name: Install Chromium dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 \
+            libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 \
+            libxfixes3 libxrandr2 libgbm1 libasound2t64
+
+      - name: Run Switch scraper (DekuDeals)
+        run: node scrape-switch-dekudeals.js
 
       - name: Show results
         run: cat dekudeals_prices_all_regions.json
