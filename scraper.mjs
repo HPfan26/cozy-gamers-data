@@ -1,8 +1,8 @@
 // ============================================================
 // THE COZY GAMERS - ITAD PRICE SCRAPER
-// Fetches prices for all games across Steam, PlayStation,
-// Xbox, and Nintendo Switch for multiple regions.
-// Outputs JSON files matching the existing price file formats.
+// Fetches prices for Steam and PlayStation only.
+// Nintendo Switch: handled by scrape-switch-nintendo-api.mjs + scrape-switch-us-ca.mjs
+// Xbox: handled by scrapeXbox2.js
 // ============================================================
 
 import fs from 'fs';
@@ -13,15 +13,15 @@ const ITAD_BASE = 'https://api.isthereanydeal.com';
 
 // Regions to fetch
 const REGIONS = {
-  gb: { xboxLocale: 'en-gb', symbol: '£' },
-  us: { xboxLocale: 'en-us', symbol: '$' },
-  ca: { xboxLocale: 'en-ca', symbol: '$' },
-  au: { xboxLocale: 'en-au', symbol: '$' },
-  pt: { xboxLocale: 'pt-pt', symbol: '€' },
+  gb: { symbol: '£' },
+  us: { symbol: '$' },
+  ca: { symbol: '$' },
+  au: { symbol: '$' },
+  pt: { symbol: '€' },
 };
 
 // ITAD shop IDs
-const SHOPS = { steam: 61, playstation: 35, xbox: 20, nintendo: 37 };
+const SHOPS = { steam: 61, playstation: 35 };
 
 // ============================================================
 // HELPERS
@@ -68,7 +68,6 @@ async function lookupItadIds(games) {
   const titles = Object.keys(games);
   const itadIds = {};
 
-  // POST /lookup/id/title/v1 — batch lookup by title
   const data = await fetchJSON(
     `${ITAD_BASE}/lookup/id/title/v1?key=${ITAD_API_KEY}`,
     {
@@ -78,7 +77,6 @@ async function lookupItadIds(games) {
     }
   );
 
-  // Response is { "Title": "uuid-or-null", ... }
   for (const [title, id] of Object.entries(data)) {
     if (id) {
       itadIds[title] = id;
@@ -114,7 +112,7 @@ async function lookupItadIds(games) {
 }
 
 // ============================================================
-// STEP 3: Fetch prices per region
+// STEP 3: Fetch Steam and PlayStation prices per region
 // ============================================================
 
 async function fetchPrices(games, itadIds) {
@@ -127,12 +125,10 @@ async function fetchPrices(games, itadIds) {
 
   const steamOut = {};
   const psOut = {};
-  const ninOut = {};
-  const xboxOut = {};
 
-  const shopFilter = `${SHOPS.steam},${SHOPS.playstation},${SHOPS.xbox},${SHOPS.nintendo}`;
+  const shopFilter = `${SHOPS.steam},${SHOPS.playstation}`;
 
-  for (const [country, regionInfo] of Object.entries(REGIONS)) {
+  for (const [country] of Object.entries(REGIONS)) {
     console.log(`\n  🌍 Fetching prices for: ${country.toUpperCase()}...`);
 
     const CHUNK = 200;
@@ -169,25 +165,6 @@ async function fetchPrices(games, itadIds) {
           const psDeal = deals.find(d => d.shop?.id === SHOPS.playstation);
           if (!psOut[title]) psOut[title] = { playstation: {} };
           psOut[title].playstation[country] = psDeal?.price?.amount ?? null;
-
-          // --- NINTENDO ---
-          const ninDeal = deals.find(d => d.shop?.id === SHOPS.nintendo);
-          if (ninDeal?.price?.amount !== undefined) {
-            if (!ninOut[title]) ninOut[title] = {};
-            ninOut[title][country] = formatPrice(ninDeal.price.amount, country);
-          }
-
-          // --- XBOX ---
-          const xboxDeal = deals.find(d => d.shop?.id === SHOPS.xbox);
-          if (xboxDeal?.price?.amount !== undefined) {
-            if (!xboxOut[title]) xboxOut[title] = {};
-            xboxOut[title][regionInfo.xboxLocale] = {
-              price: formatPrice(xboxDeal.price.amount, country),
-              originalPrice: xboxDeal.regular?.amount && xboxDeal.regular.amount !== xboxDeal.price.amount
-                ? formatPrice(xboxDeal.regular.amount, country)
-                : null
-            };
-          }
         }
 
         await sleep(300);
@@ -197,7 +174,7 @@ async function fetchPrices(games, itadIds) {
     }
   }
 
-  return { steamOut, psOut, ninOut, xboxOut };
+  return { steamOut, psOut };
 }
 
 // ============================================================
@@ -219,7 +196,7 @@ async function main() {
       process.exit(1);
     }
 
-    const { steamOut, psOut, ninOut, xboxOut } = await fetchPrices(games, itadIds);
+    const { steamOut, psOut } = await fetchPrices(games, itadIds);
 
     console.log('\n📝 Writing price files...');
     fs.writeFileSync('steamPrices_multi.json', JSON.stringify(steamOut, null, 2));
@@ -228,12 +205,8 @@ async function main() {
     fs.writeFileSync('playstation-prices.json', JSON.stringify(psOut, null, 2));
     console.log(`✅ playstation-prices.json (${Object.keys(psOut).length} games)`);
 
-    fs.writeFileSync('dekudeals_prices_all_regions.json', JSON.stringify(ninOut, null, 2));
-    console.log(`✅ dekudeals_prices_all_regions.json (${Object.keys(ninOut).length} games)`);
-
-    fs.writeFileSync('xboxPrices.json', JSON.stringify(xboxOut, null, 2));
-    console.log(`✅ xboxPrices.json (${Object.keys(xboxOut).length} games)`);
-
+    console.log('ℹ️  Nintendo Switch prices handled by scrape-switch-nintendo-api.mjs + scrape-switch-us-ca.mjs');
+    console.log('ℹ️  Xbox prices handled by scrapeXbox2.js');
     console.log('\n🎉 All price files updated successfully!');
 
   } catch (err) {
