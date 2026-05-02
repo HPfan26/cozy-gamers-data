@@ -357,83 +357,84 @@ const regions = ['en-us', 'en-gb', 'de-de', 'fr-fr', 'en-au', 'en-ca', 'pt-pt', 
 
 (async () => {
   const browser = await puppeteer.launch({ headless: 'new' });
-  const page = await browser.newPage();
 
   // Prevent redirects
-  await page.setExtraHTTPHeaders({
-    'Accept-Language': 'en-US,en;q=0.9'
-  });
-
-  await page.setUserAgent(
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36'
-  );
+  const mainPage = await browser.newPage();
+  await mainPage.setExtraHTTPHeaders({ 'Accept-Language': 'en-US,en;q=0.9' });
+  await mainPage.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36');
+  await mainPage.close();
 
   const results = {};
 
   for (const game of gameList) {
     results[game.title] = {};
 
-      for (const region of regions) {
-          if (game.unavailable && game.unavailable.includes(region)) {
-            console.warn(`🚫 Skipping ${game.title} in ${region} (marked unavailable)`);
-            results[game.title][region] = 'unavailable';
-            continue; // Skip to the next region
-          }
-          const slug = typeof game.slug === 'object' ? game.slug[region] || game.slug.default : game.slug;
-          const productId = typeof game.productId === 'object' ? game.productId[region] || game.productId.default : game.productId;
-          const url = `https://www.xbox.com/${region}/games/store/${slug}/${productId}`;
-        const page = await browser.newPage();
+    for (const region of regions) {
+      if (game.unavailable && game.unavailable.includes(region)) {
+        console.warn(`🚫 Skipping ${game.title} in ${region} (marked unavailable)`);
+        results[game.title][region] = 'unavailable';
+        continue;
+      }
 
-        try {
-          console.log(`Scraping ${game.title} in ${region}: ${url}`);
-          const response = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+      const slug = typeof game.slug === 'object' ? game.slug[region] || game.slug.default : game.slug;
+      const productId = typeof game.productId === 'object' ? game.productId[region] || game.productId.default : game.productId;
+      const url = `https://www.xbox.com/${region}/games/store/${slug}/${productId}`;
+      const page = await browser.newPage();
 
-          if (!response || !response.ok()) {
-            throw new Error(`Bad response: ${response?.status()}`);
-          }
+      try {
+        console.log(`Scraping ${game.title} in ${region}: ${url}`);
+        const response = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
 
-          await page.waitForSelector('button', { timeout: 45000 });
-          await new Promise(resolve => setTimeout(resolve, 5000));
+        if (!response || !response.ok()) {
+          throw new Error(`Bad response: ${response?.status()}`);
+        }
 
-          const debugLabels = await page.evaluate(() =>
-            Array.from(document.querySelectorAll('button'))
-              .map(btn => btn.getAttribute('aria-label'))
-              .filter(Boolean)
-          );
+        await page.waitForSelector('button', { timeout: 45000 });
+        await new Promise(resolve => setTimeout(resolve, 5000));
 
-          console.log(`🕵️ Found ${debugLabels.length} buttons for ${game.title} in ${region}`);
-          console.log(debugLabels);
+        const priceData = await page.evaluate(() => {
+          const buttons = Array.from(document.querySelectorAll('button[aria-label]'));
 
-          const priceData = await page.evaluate(() => {
-            const priceElement = document.querySelector('.AcquisitionButtons-module__listedPrice___PS6Zm');
+          // Look for the Buy button — its aria-label contains the price
+          const buyButton = buttons.find(btn => btn.getAttribute('aria-label')?.startsWith('Buy '));
 
-            if (priceElement) {
-              const text = priceElement.innerText.trim();
-              return {
-                price: text || null,
-                originalPrice: null
-              };
-            }
-
+          if (buyButton) {
+            const ariaLabel = buyButton.getAttribute('aria-label');
+            // Extract price — handles £, $, €, kr, zł, Kč, Ft, R$ etc.
+            const priceMatch = ariaLabel.match(/[£$€₹]\s?[\d,.]+|[\d,.]+\s*(kr\.?|zł|Kč|Ft|R\$)/);
             return {
-              price: null,
+              price: priceMatch ? priceMatch[0].trim() : null,
               originalPrice: null
             };
-          });
-
-          results[game.title][region] = priceData;
-
-          if (!priceData.price) {
-            console.warn(`⚠️ No price found for ${game.title} in ${region}`);
           }
 
-        } catch (err) {
-          console.warn(`❌ Failed to scrape ${game.title} in ${region}: ${err.message}`);
-          results[game.title][region] = null;
-        } finally {
-          await page.close(); // ✅ Close the page regardless of success/failure
+          // Fallback: check if it's free
+          const freeButton = buttons.find(btn =>
+            btn.getAttribute('aria-label')?.toLowerCase().includes('get for free') ||
+            btn.getAttribute('aria-label')?.toLowerCase().includes('free to play')
+          );
+          if (freeButton) {
+            return { price: 'Free', originalPrice: null };
+          }
+
+          return { price: null, originalPrice: null };
+        });
+
+        results[game.title][region] = priceData;
+
+        if (!priceData.price) {
+          console.warn(`⚠️ No price found for ${game.title} in ${region}`);
+        } else {
+          console.log(`✅ ${game.title} (${region}): ${priceData.price}`);
         }
+
+      } catch (err) {
+        console.warn(`❌ Failed to scrape ${game.title} in ${region}: ${err.message}`);
+        results[game.title][region] = null;
+      } finally {
+        await page.close();
       }
+    }
   }
 
   await browser.close();
