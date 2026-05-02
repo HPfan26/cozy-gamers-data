@@ -356,8 +356,11 @@ const gameList = [
 const regions = ['en-us', 'en-gb', 'de-de', 'fr-fr', 'en-au', 'en-ca', 'pt-pt', 'es-es', 'pt-br', 'sv-se', 'en-in', 'nl-nl', 'pl-pl', 'th-th', 'da-dk', 'en-ph', 'cs-cz', 'hu-hu', 'en-za', 'es-mx', 'fi-fi'];
 
 (async () => {
-  const browser = await puppeteer.launch({ headless: 'new' });
-
+const browser = await puppeteer.launch({
+  headless: 'new',
+  args: ['--no-sandbox', '--disable-setuid-sandbox']
+});
+  
   // Prevent redirects
   const mainPage = await browser.newPage();
   await mainPage.setExtraHTTPHeaders({ 'Accept-Language': 'en-US,en;q=0.9' });
