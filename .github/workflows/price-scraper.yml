@@ -18,12 +18,44 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Run price scraper
+      - name: Install dependencies
+        run: |
+          npm install puppeteer puppeteer-extra puppeteer-extra-plugin-stealth
+
+      - name: Install Chromium system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 \
+            libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 \
+            libxfixes3 libxrandr2 libgbm1 libasound2t64
+
+      # ============================================================
+      # SCRAPE ALL PLATFORMS
+      # ============================================================
+
+      - name: Scrape Steam + PlayStation prices (ITAD)
         env:
           ITAD_API_KEY: ${{ secrets.ITAD_API_KEY }}
         run: node scraper.mjs
 
-      - name: Upload Steam prices to WordPress
+      - name: Scrape PlayStation prices (Puppeteer)
+        run: node scrapePlayStationPrices.js
+
+      - name: Scrape Xbox prices (Puppeteer)
+        run: node scrapeXbox2.js
+
+      - name: Scrape Switch prices GB/AU/PT (Nintendo eShop API)
+        run: node scrape-switch-nintendo-api.mjs
+
+      - name: Scrape Switch prices US/CA (Nintendo store pages)
+        run: node scrape-switch-us-ca.mjs
+
+      # ============================================================
+      # UPLOAD ALL PRICE FILES TO WORDPRESS
+      # ============================================================
+
+      - name: Upload Steam prices
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
           server: ${{ secrets.SFTP_HOST }}
@@ -35,7 +67,7 @@ jobs:
           sftp_only: true
           sftpArgs: '-o ConnectTimeout=10'
 
-      - name: Upload PlayStation prices to WordPress
+      - name: Upload PlayStation prices
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
           server: ${{ secrets.SFTP_HOST }}
@@ -47,7 +79,7 @@ jobs:
           sftp_only: true
           sftpArgs: '-o ConnectTimeout=10'
 
-      - name: Upload Nintendo prices to WordPress
+      - name: Upload Nintendo Switch prices
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
           server: ${{ secrets.SFTP_HOST }}
@@ -59,7 +91,7 @@ jobs:
           sftp_only: true
           sftpArgs: '-o ConnectTimeout=10'
 
-      - name: Upload Xbox prices to WordPress
+      - name: Upload Xbox prices
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
           server: ${{ secrets.SFTP_HOST }}
