@@ -45,21 +45,22 @@ jobs:
         run: node scrapePlayStationPrices.js
 
       # ============================================================
-      # SWITCH - two options available:
-      # Option A: DekuDeals (currently active)
-      # Option B: Nintendo eShop API (comment A, uncomment B)
-      # ============================================================
-      - name: Scrape Switch prices (DekuDeals)
-        run: node scrape-switch-dekudeals.js
-
-      # - name: Scrape Switch prices (Nintendo eShop API)
-      #   run: node scrape-switch-nintendo-api.mjs
-
-      # ============================================================
       # XBOX - via Puppeteer scraper
       # ============================================================
       - name: Scrape Xbox prices
         run: node scrapeXbox2.js
+
+      # ============================================================
+      # SWITCH - Nintendo eShop API for GB/AU/PT (no browser needed)
+      # ============================================================
+      - name: Scrape Switch prices GB/AU/PT (Nintendo eShop API)
+        run: node scrape-switch-nintendo-api.mjs
+
+      # ============================================================
+      # SWITCH - Nintendo store pages for US/CA (no browser needed)
+      # ============================================================
+      - name: Scrape Switch prices US/CA (Nintendo store pages)
+        run: node scrape-switch-us-ca.mjs
 
       # ============================================================
       # UPLOAD ALL PRICE FILES TO WORDPRESS
