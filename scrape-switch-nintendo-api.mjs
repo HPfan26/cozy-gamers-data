@@ -2,17 +2,32 @@
 // SWITCH PRICE SCRAPER - NINTENDO ESHOP API METHOD
 // Uses the official Nintendo eShop API directly (no browser needed)
 // NSUIDs verified via Nintendo's search API
-// Filtered to: GB, US, CA, AU, PT
+// Covers all regions matching Xbox coverage
+// Note: US and CA are handled by scrape-switch-us-ca.mjs (store page method)
+//       as the eShop API does not accept US/CA NSUIDs
 // ============================================================
 
 import fs from 'fs';
 
+// All regions the Nintendo eShop API supports
+// US and CA are excluded here — handled by scrape-switch-us-ca.mjs
 const REGIONS = {
   gb: { symbol: '£' },
-  us: { symbol: '$' },
-  ca: { symbol: '$' },
   au: { symbol: '$' },
   pt: { symbol: '€' },
+  de: { symbol: '€' },
+  fr: { symbol: '€' },
+  es: { symbol: '€' },
+  nl: { symbol: '€' },
+  fi: { symbol: '€' },
+  hu: { symbol: '€' },
+  se: { symbol: 'kr' },
+  dk: { symbol: 'kr' },
+  pl: { symbol: 'zł' },
+  cz: { symbol: 'Kč' },
+  za: { symbol: 'R' },
+  mx: { symbol: '$' },
+  br: { symbol: 'R$' },
 };
 
 const games = [
@@ -67,9 +82,8 @@ const games = [
   { title: 'Caravan SandWitch', nsuid: '70010000037487' },
   { title: 'Firewatch', nsuid: '70010000007925' },
   { title: 'Ooblets', nsuid: '70010000048968' },
-  { title: 'Wytchwood', nsuid: '70010000042327' },
-  { title: 'Neva', nsuid: '70010000067709' },
-  { title: 'Palia', nsuid: '70010000064807' },
+  { title: 'Neva', nsuid: '70010000071466' },
+  { title: 'Wytchwood', nsuid: '70010000046095' },
 ];
 
 function sleep(ms) {
@@ -79,13 +93,12 @@ function sleep(ms) {
 function formatPrice(amount, country) {
   if (amount === 0) return 'Free';
   const { symbol } = REGIONS[country];
+  if (['kr', 'zł', 'Kč', 'R$'].includes(symbol)) return `${amount.toFixed(2)} ${symbol}`;
   if (symbol === '€') return `${amount.toFixed(2)}€`;
   return `${symbol}${amount.toFixed(2)}`;
 }
 
 async function fetchPricesForGame(nsuid) {
-  // Fetch all 5 regions in one API call by passing multiple country codes
-  const countries = Object.keys(REGIONS).map(c => c.toUpperCase()).join(',');
   const results = {};
 
   for (const country of Object.keys(REGIONS)) {
@@ -115,16 +128,27 @@ async function fetchPricesForGame(nsuid) {
 
 async function main() {
   console.log('🎮 Nintendo eShop API price scraper starting...');
-  const results = {};
+
+  // Load existing file so scrape-switch-us-ca.mjs entries (us, ca) are preserved
+  let existing = {};
+  try {
+    const raw = fs.readFileSync('dekudeals_prices_all_regions.json', 'utf8');
+    existing = JSON.parse(raw);
+  } catch {
+    console.log('No existing file found, starting fresh');
+  }
 
   for (const game of games) {
     console.log(`🔍 Fetching ${game.title}...`);
     const prices = await fetchPricesForGame(game.nsuid);
-    results[game.title] = prices;
+
+    // Merge into existing entry, preserving us/ca from the other scraper
+    if (!existing[game.title]) existing[game.title] = {};
+    Object.assign(existing[game.title], prices);
 
     const found = Object.keys(prices).length;
     if (found > 0) {
-      console.log(`  ✅ ${found} regions: ${JSON.stringify(prices)}`);
+      console.log(`  ✅ ${found} regions found`);
     } else {
       console.log(`  ❌ No prices found`);
     }
@@ -132,9 +156,9 @@ async function main() {
     await sleep(300);
   }
 
-  fs.writeFileSync('dekudeals_prices_all_regions.json', JSON.stringify(results, null, 2));
+  fs.writeFileSync('dekudeals_prices_all_regions.json', JSON.stringify(existing, null, 2));
   console.log('\n💾 Switch prices saved to dekudeals_prices_all_regions.json');
-  console.log(`✅ ${Object.values(results).filter(p => Object.keys(p).length > 0).length} / ${games.length} games with prices`);
+  console.log(`✅ ${Object.values(existing).filter(p => Object.keys(p).length > 0).length} / ${games.length} games with prices`);
 }
 
 main();
