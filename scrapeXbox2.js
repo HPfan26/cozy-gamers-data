@@ -349,23 +349,45 @@ const gameList = [
     title: 'Spiritfarer',
     slug: 'spiritfarer-farewell-edition',
     productId: '9ng5l58fd3x5'
-  }
+  },
+  {
+    title: 'The Sims 4',
+    slug: {
+      default: 'the-sims-4',
+      'th-th': 'the-sims-4-ea-play-edition',
+      'en-ph': 'the-sims-4-ea-play-edition'
+    },
+    productId: {
+      default: 'C08JXNK0VG5L',
+      'th-th': '9PB5T776N2SW',
+      'en-ph': '9PB5T776N2SW'
+    }
+  },
+  {
+    title: 'Sky: Children of the Light',
+    slug: 'sky-children-of-the-light',
+    productId: '9PB9GHRXD7GC'
+  },
+  {
+    title: 'Infinity Nikki',
+    slug: 'infinity-nikki',
+    productId: '9NB53JQ7TR98'
+  },
+  {
+    title: 'Dave the Diver',
+    slug: 'dave-the-diver',
+    productId: '9nblggh6h3lx'
+  },
 ];
 
 // Xbox.com uses locale codes, not ISO country codes
 const regions = ['en-us', 'en-gb', 'de-de', 'fr-fr', 'en-au', 'en-ca', 'pt-pt', 'es-es', 'pt-br', 'sv-se', 'en-in', 'nl-nl', 'pl-pl', 'th-th', 'da-dk', 'en-ph', 'cs-cz', 'hu-hu', 'en-za', 'es-mx', 'fi-fi'];
 
 (async () => {
-const browser = await puppeteer.launch({
-  headless: 'new',
-  args: ['--no-sandbox', '--disable-setuid-sandbox']
-});
-  
-  // Prevent redirects
-  const mainPage = await browser.newPage();
-  await mainPage.setExtraHTTPHeaders({ 'Accept-Language': 'en-US,en;q=0.9' });
-  await mainPage.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36');
-  await mainPage.close();
+  const browser = await puppeteer.launch({
+    headless: 'new',
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  });
 
   const results = {};
 
@@ -404,19 +426,33 @@ const browser = await puppeteer.launch({
           if (buyButton) {
             const ariaLabel = buyButton.getAttribute('aria-label');
             // Extract price — handles £, $, €, kr, zł, Kč, Ft, R$ etc.
+            // Strip trailing punctuation like commas or periods
             const priceMatch = ariaLabel.match(/[£$€₹]\s?[\d,.]+|[\d,.]+\s*(kr\.?|zł|Kč|Ft|R\$)/);
-            return {
-              price: priceMatch ? priceMatch[0].trim() : null,
-              originalPrice: null
-            };
+            if (priceMatch) {
+              // Remove any trailing comma or period
+              const clean = priceMatch[0].trim().replace(/[,.]$/, '');
+              return { price: clean, originalPrice: null };
+            }
           }
 
-          // Fallback: check if it's free
-          const freeButton = buttons.find(btn =>
-            btn.getAttribute('aria-label')?.toLowerCase().includes('get for free') ||
-            btn.getAttribute('aria-label')?.toLowerCase().includes('free to play')
-          );
+          // Check for free-to-play — covers "Get for free", "Free to play", "Install" with no price
+          const freePatterns = [
+            /get for free/i,
+            /free to play/i,
+            /install free/i,
+            /play for free/i,
+          ];
+          const freeButton = buttons.find(btn => {
+            const label = btn.getAttribute('aria-label') || '';
+            return freePatterns.some(p => p.test(label));
+          });
           if (freeButton) {
+            return { price: 'Free', originalPrice: null };
+          }
+
+          // Also check if "Free" appears as price text anywhere on the page
+          const allText = document.body.innerText;
+          if (/\bfree to play\b/i.test(allText) || /\bplay for free\b/i.test(allText)) {
             return { price: 'Free', originalPrice: null };
           }
 
