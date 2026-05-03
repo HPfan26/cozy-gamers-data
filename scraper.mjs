@@ -11,17 +11,39 @@ const ITAD_API_KEY = process.env.ITAD_API_KEY;
 const GAMES_URL = 'https://raw.githubusercontent.com/HPfan26/cozy-gamers-data/main/games.json';
 const ITAD_BASE = 'https://api.isthereanydeal.com';
 
-// Regions to fetch
+// All 21 regions matching Xbox coverage
 const REGIONS = {
   gb: { symbol: '£' },
   us: { symbol: '$' },
   ca: { symbol: '$' },
   au: { symbol: '$' },
   pt: { symbol: '€' },
+  de: { symbol: '€' },
+  fr: { symbol: '€' },
+  es: { symbol: '€' },
+  nl: { symbol: '€' },
+  fi: { symbol: '€' },
+  se: { symbol: 'kr' },
+  dk: { symbol: 'kr' },
+  pl: { symbol: 'zł' },
+  cz: { symbol: 'Kč' },
+  hu: { symbol: '€' },
+  br: { symbol: 'R$' },
+  mx: { symbol: '$' },
+  za: { symbol: 'R' },
+  in: { symbol: '₹' },
+  ph: { symbol: '₱' },
 };
 
 // ITAD shop IDs
 const SHOPS = { steam: 61, playstation: 35 };
+
+// Additional Steam App IDs not in games.json or with title mismatches
+const STEAM_APP_ID_OVERRIDES = {
+  'The Sims 2': 3314070,
+  'Frog Detective': 963000,
+  'Sugardew Island': 2711030,
+};
 
 // ============================================================
 // HELPERS
@@ -43,6 +65,8 @@ function sleep(ms) {
 function formatPrice(amount, country) {
   if (amount === 0) return 'Free';
   const sym = REGIONS[country]?.symbol || '$';
+  // Currencies that go after the number
+  if (['kr', 'zł', 'Kč'].includes(sym)) return `${amount.toFixed(2)} ${sym}`;
   if (sym === '€') return `${amount.toFixed(2)}€`;
   return `${sym}${amount.toFixed(2)}`;
 }
@@ -85,19 +109,20 @@ async function lookupItadIds(games) {
     }
   }
 
-  // For misses, try Steam App ID lookup individually
-  const misses = titles.filter(t => !itadIds[t] && games[t].steamAppId);
-  console.log(`  🔄 Trying Steam App ID lookup for ${misses.length} missed games...`);
+  // For misses, try Steam App ID lookup — check overrides first, then games.json
+  const misses = titles.filter(t => !itadIds[t]);
+  const missesWithAppId = misses.filter(t => STEAM_APP_ID_OVERRIDES[t] || games[t].steamAppId);
+  console.log(`  🔄 Trying Steam App ID lookup for ${missesWithAppId.length} missed games...`);
 
-  for (const title of misses) {
-    const appId = games[title].steamAppId;
+  for (const title of missesWithAppId) {
+    const appId = STEAM_APP_ID_OVERRIDES[title] || games[title].steamAppId;
     try {
       const result = await fetchJSON(
         `${ITAD_BASE}/games/lookup/v1?key=${ITAD_API_KEY}&appid=${appId}`
       );
       if (result.found && result.game?.id) {
         itadIds[title] = result.game.id;
-        console.log(`  ✅ Found via Steam ID: ${title}`);
+        console.log(`  ✅ Found via Steam ID: ${title} (${appId})`);
       } else {
         console.warn(`  ❌ Still not found: ${title}`);
       }
@@ -154,8 +179,8 @@ async function fetchPrices(games, itadIds) {
           // --- STEAM ---
           const steamDeal = deals.find(d => d.shop?.id === SHOPS.steam);
           if (steamDeal?.price?.amount !== undefined) {
-            const appId = String(games[title]?.steamAppId);
-            if (appId && appId !== 'null') {
+            const appId = String(STEAM_APP_ID_OVERRIDES[title] || games[title]?.steamAppId);
+            if (appId && appId !== 'null' && appId !== 'undefined') {
               if (!steamOut[appId]) steamOut[appId] = {};
               steamOut[appId][country] = formatPrice(steamDeal.price.amount, country);
             }
