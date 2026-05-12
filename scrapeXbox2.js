@@ -418,46 +418,42 @@ const regions = ['en-us', 'en-gb', 'de-de', 'fr-fr', 'en-au', 'en-ca', 'pt-pt', 
         await new Promise(resolve => setTimeout(resolve, 5000));
 
         const priceData = await page.evaluate(() => {
-          const buttons = Array.from(document.querySelectorAll('button[aria-label]'));
+  const buttons = Array.from(document.querySelectorAll('button[data-m]'));
 
-          // Look for the Buy button — its aria-label contains the price
-          const buyButton = buttons.find(btn => btn.getAttribute('aria-label')?.startsWith('Buy '));
+  // Find Buy button by its id in data-m — works in all languages
+  const buyButton = buttons.find(btn => {
+    try {
+      const dm = JSON.parse(btn.getAttribute('data-m') || '{}');
+      return dm.id === 'BuyButton';
+    } catch { return false; }
+  });
 
-          if (buyButton) {
-            const ariaLabel = buyButton.getAttribute('aria-label');
-            // Extract price — handles £, $, €, kr, zł, Kč, Ft, R$ etc.
-            // Strip trailing punctuation like commas or periods
-            const priceMatch = ariaLabel.match(/[£$€₹]\s?[\d,.]+|[\d,.]+\s*(kr\.?|zł|Kč|Ft|R\$)/);
-            if (priceMatch) {
-              // Remove any trailing comma or period
-              const clean = priceMatch[0].trim().replace(/[,.]$/, '');
-              return { price: clean, originalPrice: null };
-            }
-          }
+  if (buyButton) {
+    const ariaLabel = buyButton.getAttribute('aria-label') || '';
+    // Handles: £14.99, $14.99, 14,99 €, 14.99 €, 940,00 ₹, etc.
+    const priceMatch = ariaLabel.match(/[£$€₹₱R]\s?[\d,.]+|[\d,.]+\s*[£$€₹₱]|[\d,.]+\s*(kr\.?|zł|Kč|Ft|R\$)/);
+    if (priceMatch) {
+      const clean = priceMatch[0].trim().replace(/[,.]$/, '');
+      return { price: clean, originalPrice: null };
+    }
+  }
 
-          // Check for free-to-play — covers "Get for free", "Free to play", "Install" with no price
-          const freePatterns = [
-            /get for free/i,
-            /free to play/i,
-            /install free/i,
-            /play for free/i,
-          ];
-          const freeButton = buttons.find(btn => {
-            const label = btn.getAttribute('aria-label') || '';
-            return freePatterns.some(p => p.test(label));
-          });
-          if (freeButton) {
-            return { price: 'Free', originalPrice: null };
-          }
+  // Free to play detection
+  const allButtons = Array.from(document.querySelectorAll('button[data-m]'));
+  const freeButton = allButtons.find(btn => {
+    try {
+      const dm = JSON.parse(btn.getAttribute('data-m') || '{}');
+      return dm.id === 'FreeButton' || dm.cN?.toLowerCase().includes('free') || dm.cN?.toLowerCase().includes('install');
+    } catch { return false; }
+  });
+  if (freeButton) return { price: 'Free', originalPrice: null };
 
-          // Also check if "Free" appears as price text anywhere on the page
-          const allText = document.body.innerText;
-          if (/\bfree to play\b/i.test(allText) || /\bplay for free\b/i.test(allText)) {
-            return { price: 'Free', originalPrice: null };
-          }
+  if (/free to play/i.test(document.body.innerText) || /play for free/i.test(document.body.innerText)) {
+    return { price: 'Free', originalPrice: null };
+  }
 
-          return { price: null, originalPrice: null };
-        });
+  return { price: null, originalPrice: null };
+});
 
         results[game.title][region] = priceData;
 
