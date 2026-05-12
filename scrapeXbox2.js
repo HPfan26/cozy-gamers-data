@@ -6,17 +6,17 @@ puppeteer.use(StealthPlugin());
 
 const gameList = [
   {
-      title: 'Stardew Valley',
-        slug: {
-          default: 'stardew-valley',
-          'th-th': 'stardew-valley',
-          'en-ph': 'stardew-valley'
-        },
-      productId: {
+    title: 'Stardew Valley',
+    slug: {
+      default: 'stardew-valley',
+      'th-th': 'stardew-valley',
+      'en-ph': 'stardew-valley'
+    },
+    productId: {
       default: 'C3D891Z6TNQM',
-          'th-th': '9mwr1nc6vq6l',
-          'en-ph': '9MWR1NC6VQ6L/0010'
-      }
+      'th-th': '9mwr1nc6vq6l',
+      'en-ph': '9MWR1NC6VQ6L/0010'
+    }
   },
   {
     title: 'Fae Farm',
@@ -25,14 +25,14 @@ const gameList = [
   },
   {
     title: 'Dredge',
-      slug: {
+    slug: {
       default: 'dredge',
-          'pl-pl': 'dredge'
-      },
-      productId: {
+      'pl-pl': 'dredge'
+    },
+    productId: {
       default: '9msvvm5ns9l6',
-          'pl-pl': '9MSVVM5NS9L6'
-      }
+      'pl-pl': '9MSVVM5NS9L6'
+    }
   },
   {
     title: 'Wanderstop',
@@ -70,17 +70,17 @@ const gameList = [
     productId: '9n5glftt40sn'
   },
   {
-      title: 'Cozy Grove',
-       slug: {
-         default: 'cozy-grove',
-         'th-th': 'cozy-grove-new-neighbears-bundle',
-         'en-ph': 'cozy-grove-new-neighbears-bundle'
-       },
-      productId: {
+    title: 'Cozy Grove',
+    slug: {
+      default: 'cozy-grove',
+      'th-th': 'cozy-grove-new-neighbears-bundle',
+      'en-ph': 'cozy-grove-new-neighbears-bundle'
+    },
+    productId: {
       default: '9pjcc91cz3wn',
-          'th-th': '9P481LTRXR7N',
-          'en-ph': '9P481LTRXR7N'
-      }
+      'th-th': '9P481LTRXR7N',
+      'en-ph': '9P481LTRXR7N'
+    }
   },
   {
     title: 'Lil Gator Game',
@@ -94,29 +94,29 @@ const gameList = [
   },
   {
     title: 'The Sims 4',
-      slug: {
+    slug: {
       default: 'the-sims-4',
-          'th-th': 'the-sims-4-ea-play-edition',
-          'en-ph': 'the-sims-4-ea-play-edition'
-      },
-      productId: {
+      'th-th': 'the-sims-4-ea-play-edition',
+      'en-ph': 'the-sims-4-ea-play-edition'
+    },
+    productId: {
       default: 'C08JXNK0VG5L',
-          'th-th': '9PB5T776N2SW',
-          'en-ph': '9PB5T776N2SW'
-      }
+      'th-th': '9PB5T776N2SW',
+      'en-ph': '9PB5T776N2SW'
+    }
   },
   {
     title: 'My Time at Portia',
-      slug: {
+    slug: {
       default: 'my-time-at-portia',
-          'th-th': 'my-time-at-portia',
-          'en-ph': 'my-time-at-portia'
-      },
-      productId: {
+      'th-th': 'my-time-at-portia',
+      'en-ph': 'my-time-at-portia'
+    },
+    productId: {
       default: 'bx1fzx1x4132',
-          'th-th': '9nblsn1jp7th',
-          'en-ph': '9nblsn1jp7th'
-      }
+      'th-th': '9nblsn1jp7th',
+      'en-ph': '9nblsn1jp7th'
+    }
   },
   {
     title: 'My Time at Sandrock',
@@ -125,17 +125,17 @@ const gameList = [
   },
   {
     title: 'Ooblets',
-      slug: {
+    slug: {
       default: 'ooblets',
-          'th-th': 'ooblets',
-          'en-ph': 'ooblets',
-      },
-      productId: {
+      'th-th': 'ooblets',
+      'en-ph': 'ooblets'
+    },
+    productId: {
       default: '9NB4GBLPTD0S',
-          'th-th': '9NB4GBLPTD0S',
-          'en-ph': '9NB4GBLPTD0S'
-      },
-      unavailable: ['de-de', 'fr-fr', 'pt-pt', 'es-es', 'sv-se', 'nl-nl', 'pl-pl', 'da-dk', 'cs-cz', 'hu-hu', 'fi-fi']
+      'th-th': '9NB4GBLPTD0S',
+      'en-ph': '9NB4GBLPTD0S'
+    },
+    unavailable: ['de-de', 'fr-fr', 'pt-pt', 'es-es', 'sv-se', 'nl-nl', 'pl-pl', 'da-dk', 'cs-cz', 'hu-hu', 'fi-fi']
   },
   {
     title: 'Firewatch',
@@ -154,9 +154,9 @@ const gameList = [
   },
   {
     title: 'Strange Horticulture',
-      slug: 'strange-horticulture',
+    slug: 'strange-horticulture',
     productId: '9mx1b2l6zm36',
-      unavailable: ['th-th', 'en-ph']
+    unavailable: ['th-th', 'en-ph']
   },
   {
     title: 'Disney Dreamlight Valley',
@@ -192,7 +192,7 @@ const gameList = [
     title: 'Paleo Pines',
     slug: 'paleo-pines',
     productId: '9nq5z2wh4xdb',
-      unavailable: ['th-th', 'en-ph']
+    unavailable: ['th-th', 'en-ph']
   },
   {
     title: 'Cult of the Lamb',
@@ -203,7 +203,7 @@ const gameList = [
     title: 'Roots of Pacha',
     slug: 'roots-of-pacha',
     productId: '9nbzz380pd19',
-      unavailable: ['th-th', 'en-ph']
+    unavailable: ['th-th', 'en-ph']
   },
   {
     title: 'Coral Island',
@@ -214,7 +214,7 @@ const gameList = [
     title: 'Potion Permit',
     slug: 'potion-permit',
     productId: '9njlqw4xl3mw',
-      unavailable: ['th-th', 'en-ph']
+    unavailable: ['th-th', 'en-ph']
   },
   {
     title: 'Potion Craft',
@@ -233,36 +233,36 @@ const gameList = [
   },
   {
     title: 'Graveyard Keeper',
-      slug: {
+    slug: {
       default: 'graveyard-keeper',
-          'th-th': 'graveyard-keeper-last-journey-edition',
-          'en-in': 'graveyard-keeper-last-journey-edition',
-          'en-ph': 'graveyard-keeper-last-journey-edition'
-      },
-      productId: {
+      'th-th': 'graveyard-keeper-last-journey-edition',
+      'en-in': 'graveyard-keeper-last-journey-edition',
+      'en-ph': 'graveyard-keeper-last-journey-edition'
+    },
+    productId: {
       default: 'c11gzgmkrtcv',
-          'en-in': 'c11gzgmkrtcv',
-          'th-th': '9PPJV0ZDBSKT',
-          'en-ph': '9PPJV0ZDBSKT'
-      }
+      'en-in': 'c11gzgmkrtcv',
+      'th-th': '9PPJV0ZDBSKT',
+      'en-ph': '9PPJV0ZDBSKT'
+    }
   },
   {
     title: 'Planet Zoo',
     slug: 'planet-zoo-console-edition',
     productId: '9nz038kz68b7',
-      unavailable: ['th-th', 'en-ph']
+    unavailable: ['th-th', 'en-ph']
   },
   {
     title: 'Planet Coaster',
     slug: 'planet-coaster-console-edition',
     productId: '9ngrx7l5nb6m',
-      unavailable: ['th-th', 'en-ph']
+    unavailable: ['th-th', 'en-ph']
   },
   {
     title: 'Planet Coaster 2',
     slug: 'planet-coaster-2',
     productId: '9PK5WS0HXQKQ',
-      unavailable: ['th-th', 'en-ph']
+    unavailable: ['th-th', 'en-ph']
   },
   {
     title: 'House Flipper',
@@ -313,7 +313,7 @@ const gameList = [
     title: 'Hogwarts Legacy',
     slug: 'hogwarts-legacy-xbox-series-x-s-version',
     productId: '9mt5nj5w7b8z',
-      unavailable: ['th-th', 'en-ph']
+    unavailable: ['th-th', 'en-ph']
   },
   {
     title: 'Botany Manor',
@@ -324,7 +324,7 @@ const gameList = [
     title: 'Monument Valley',
     slug: 'monument-valley',
     productId: '9nt17x2mr55h',
-      unavailable: ['th-th', 'en-ph']
+    unavailable: ['th-th', 'en-ph']
   },
   {
     title: 'Monument Valley 2',
@@ -334,16 +334,16 @@ const gameList = [
   },
   {
     title: 'ABZU',
-      slug: {
+    slug: {
       default: 'abzu',
-          'th-th': 'abzu',
-          'en-ph': 'abzu'
-      },
-      productId: {
+      'th-th': 'abzu',
+      'en-ph': 'abzu'
+    },
+    productId: {
       default: 'bq2307m831zg',
-          'th-th': '9PNLF7RLZRVV',
-          'en-ph': '9PNLF7RLZRVV'
-      }
+      'th-th': '9PNLF7RLZRVV',
+      'en-ph': '9PNLF7RLZRVV'
+    }
   },
   {
     title: 'Spiritfarer',
@@ -351,32 +351,15 @@ const gameList = [
     productId: '9ng5l58fd3x5'
   },
   {
-    title: 'The Sims 4',
-    slug: {
-      default: 'the-sims-4',
-      'th-th': 'the-sims-4-ea-play-edition',
-      'en-ph': 'the-sims-4-ea-play-edition'
-    },
-    productId: {
-      default: 'C08JXNK0VG5L',
-      'th-th': '9PB5T776N2SW',
-      'en-ph': '9PB5T776N2SW'
-    }
-  },
-  {
     title: 'Sky: Children of the Light',
     slug: 'sky-children-of-the-light',
     productId: '9PB9GHRXD7GC'
   },
-  {
-    title: 'Infinity Nikki',
-    slug: 'infinity-nikki',
-    productId: '9NB53JQ7TR98'
-  },
+
   {
     title: 'Dave the Diver',
     slug: 'dave-the-diver',
-    productId: '9nblggh6h3lx'
+    productId: '9PC1ZMD65L0T'
   },
 ];
 
@@ -418,42 +401,41 @@ const regions = ['en-us', 'en-gb', 'de-de', 'fr-fr', 'en-au', 'en-ca', 'pt-pt', 
         await new Promise(resolve => setTimeout(resolve, 5000));
 
         const priceData = await page.evaluate(() => {
-  const buttons = Array.from(document.querySelectorAll('button[data-m]'));
+          const buttons = Array.from(document.querySelectorAll('button[data-m]'));
 
-  // Find Buy button by its id in data-m — works in all languages
-  const buyButton = buttons.find(btn => {
-    try {
-      const dm = JSON.parse(btn.getAttribute('data-m') || '{}');
-      return dm.id === 'BuyButton';
-    } catch { return false; }
-  });
+          // Find Buy button by its id in data-m — works in all languages
+          const buyButton = buttons.find(btn => {
+            try {
+              const dm = JSON.parse(btn.getAttribute('data-m') || '{}');
+              return dm.id === 'BuyButton';
+            } catch { return false; }
+          });
 
-  if (buyButton) {
-    const ariaLabel = buyButton.getAttribute('aria-label') || '';
-    // Handles: £14.99, $14.99, 14,99 €, 14.99 €, 940,00 ₹, etc.
-    const priceMatch = ariaLabel.match(/[£$€₹₱R]\s?[\d,.]+|[\d,.]+\s*[£$€₹₱]|[\d,.]+\s*(kr\.?|zł|Kč|Ft|R\$)/);
-    if (priceMatch) {
-      const clean = priceMatch[0].trim().replace(/[,.]$/, '');
-      return { price: clean, originalPrice: null };
-    }
-  }
+          if (buyButton) {
+            const ariaLabel = buyButton.getAttribute('aria-label') || '';
+            // Handles: £14.99, $14.99, 14,99 €, 14.99 €, 940,00 ₹, etc.
+            const priceMatch = ariaLabel.match(/[£$€₹₱R]\s?[\d,.]+|[\d,.]+\s*[£$€₹₱]|[\d,.]+\s*(kr\.?|zł|Kč|Ft|R\$)/);
+            if (priceMatch) {
+              const clean = priceMatch[0].trim().replace(/[,.]$/, '');
+              return { price: clean, originalPrice: null };
+            }
+          }
 
-  // Free to play detection
-  const allButtons = Array.from(document.querySelectorAll('button[data-m]'));
-  const freeButton = allButtons.find(btn => {
-    try {
-      const dm = JSON.parse(btn.getAttribute('data-m') || '{}');
-      return dm.id === 'FreeButton' || dm.cN?.toLowerCase().includes('free') || dm.cN?.toLowerCase().includes('install');
-    } catch { return false; }
-  });
-  if (freeButton) return { price: 'Free', originalPrice: null };
+          // Free to play detection
+          const freeButton = buttons.find(btn => {
+            try {
+              const dm = JSON.parse(btn.getAttribute('data-m') || '{}');
+              return dm.id === 'FreeButton' || dm.cN?.toLowerCase().includes('free') || dm.cN?.toLowerCase().includes('install');
+            } catch { return false; }
+          });
+          if (freeButton) return { price: 'Free', originalPrice: null };
 
-  if (/free to play/i.test(document.body.innerText) || /play for free/i.test(document.body.innerText)) {
-    return { price: 'Free', originalPrice: null };
-  }
+          if (/free to play/i.test(document.body.innerText) || /play for free/i.test(document.body.innerText)) {
+            return { price: 'Free', originalPrice: null };
+          }
 
-  return { price: null, originalPrice: null };
-});
+          return { price: null, originalPrice: null };
+        });
 
         results[game.title][region] = priceData;
 
