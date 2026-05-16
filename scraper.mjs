@@ -45,6 +45,14 @@ const STEAM_APP_ID_OVERRIDES = {
   'Sugardew Island': 2711030,
 };
 
+// Hardcoded ITAD UUIDs for games where title/appid lookup fails
+// These bypass the lookup step entirely
+const ITAD_ID_OVERRIDES = {
+  'The Sims 2': '0194bd22-9604-7210-b4fa-91a0bb285c95',
+  'Sugardew Island': '018d937f-7b24-7178-a0de-2498bfede39f',
+  'Frog Detective': '018d937f-665a-71ea-b5dd-06f66734767a',
+};
+
 // ============================================================
 // HELPERS
 // ============================================================
@@ -91,6 +99,12 @@ async function lookupItadIds(games) {
 
   const titles = Object.keys(games);
   const itadIds = {};
+
+  // Apply hardcoded ITAD ID overrides first
+  for (const [title, id] of Object.entries(ITAD_ID_OVERRIDES)) {
+    itadIds[title] = id;
+    console.log(`  ✅ Using hardcoded ITAD ID for: ${title}`);
+  }
 
   const data = await fetchJSON(
     `${ITAD_BASE}/lookup/id/title/v1?key=${ITAD_API_KEY}`,
