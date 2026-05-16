@@ -175,7 +175,8 @@
     "description": "Join Hello Kitty and friends on a relaxing island getaway filled with friendship, crafting, and exploration.",
     "stores": {
       "steam": "https://store.steampowered.com/app/2495100/Hello_Kitty_Island_Adventure/",
-      "switch": "https://linkly.link/2EtdU"
+      "switch": "https://linkly.link/2EtdU",
+      "playstation": "https://store.playstation.com/en-gb/concept/10008904"
     }
   },
   "Minami Lane": {
@@ -812,7 +813,8 @@
     "stores": {
       "steam": "https://store.steampowered.com/app/1868140/DAVE_THE_DIVER/",
       "switch": "https://linkly.link/2F2k1",
-      "playstation": "https://linkly.link/2EAgu"
+      "playstation": "https://linkly.link/2EAgu",
+      "xbox": "https://www.xbox.com/en-gb/games/store/dave-the-diver/9PC1ZMD65L0T"
     }
   },
   "Two Point Hospital": {
