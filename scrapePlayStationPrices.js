@@ -184,7 +184,7 @@ title: 'Cozy Caravan',
 {
 title: 'Hello Kitty Island Adventure',
     regions: {
-      ps_concept: 'null'
+      ps_concept: '10008904'
     }
   },
 {
@@ -771,6 +771,14 @@ async function getPSPrice(page, localePath) {
     priceText = await extractFromCss(page);
   }
 
+  // Detect free-to-play before giving up
+  if (!priceText || /^free/i.test(priceText.trim())) {
+    const pageText = await page.evaluate(() => document.body.innerText);
+    if (/free to play|free-to-play|play for free|download free/i.test(pageText)) {
+      return { status: 'free', url: urlNow };
+    }
+  }
+
   if (!priceText) {
     // 4) Check if CTA exists at all; if not, mark unavailable
     const hasCta = await page.$('[data-qa*="cta"], [data-qa*="addToCart"], [data-qa*="mfeCtaMain"]');
@@ -829,7 +837,11 @@ async function run() {
               await delay(800);
 
             const res = await getPSPrice(page, localePath);
-            if (res.status === 'ok') {
+            if (res.status === 'free') {
+              result[game.title].playstation[region] = 0;
+              console.log(`✅ ${game.title} [${region}] = Free`);
+              break;
+            } else if (res.status === 'ok') {
               priceNumber = cleanPriceTextToNumber(res.priceText);
               if (priceNumber !== null) {
                 result[game.title].playstation[region] = priceNumber;
